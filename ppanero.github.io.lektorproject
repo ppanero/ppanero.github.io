@@ -1,2 +1,5 @@
 [project]
 name = ppanero.github.io
+
+[servers.ghpages]
+target = ghpages+https://ppanero/ppanero.github.io
