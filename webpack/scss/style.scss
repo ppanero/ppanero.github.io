@@ -1,14 +1,8 @@
+@import "variables";
+
 body {
     font-family: 'Verdana', sans-serif;
     margin: 50px 25px;
-}
-
-a {
-    color: #2a99b6;
-}
-
-a:hover {
-    color: #33bbdf;
 }
 
 header, footer, div.page {
@@ -17,44 +11,24 @@ header, footer, div.page {
 }
 
 /* Section background*/
-.section-content-white-bg,
+.section-content-dark-bg,
 .section-content-light-bg {
   padding-top: calc(3 * 30px);
   padding-bottom: calc(3 * 30px);
 }
 
-.section-content-white-bg a,
-.section-content-light-bg a {
-  text-decoration: none;
-  color: #0377cdb5;
-  font-weight: 600;
-}
-.section-content-white-bg a:hover,
-.section-content-white-bg a:focus,
-.section-content-light-bg a:hover,
-.section-content-light-bg a:focus {
-  color: #0377cd;
-}
-.section-content-white-bg,
+.section-content-dark-bg,
 .section-content-light-bg {
-  color: #333;
   width: 100%;
   text-align: justify;
   font-size: 1.2em;
   font-weight: 300;
 }
-.section-content-white-bg {
-  background-color: #fff;
+.section-content-dark-bg {
+  background-color: $light-bg-color;
 }
 .section-content-light-bg {
-  background-color: rgba(173, 206, 224, 0.52);
-}
-.section-content-white-bg h6,
-.section-content-light-bg h6 {
-  font-weight: 300;
-  font-size: 1.4em;
-  padding-bottom: 10px;
-  color: #0377cd;
+  background-color: $dark-bg-color
 }
 
 .section-title {
@@ -63,16 +37,24 @@ header, footer, div.page {
     width: 100%;
     text-align: center;
     display: block;
-    color: #0377cd;
     margin-bottom: 45px;
     font-weight: 500;
+}
+
+.section-content-light-bg .section-title {
+    color: $light-title-color;
+}
+
+.section-content-dark-bg .section-title {
+  color: $dark-title-color;
 }
 
 /* Footer */
 
 footer {
     padding: 20px 30px;
-    background-color: #0377cd;
+    color: $footer-text-color;
+    background-color: $footer-bg-color;
 }
 
 /* Experience timeline */
@@ -91,14 +73,14 @@ footer {
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #eeeeee;
+  background-color: $light-color-secondary;
   left: 2.5%;
   margin-left: -1.5px;
 }
 
 /* bullet */
 .timeline > li > .timeline-badge {
-  color: #fff;
+  color: $light-color;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -108,7 +90,7 @@ footer {
   top: 16px;
   left: 2.5%;
   margin-left: -25px;
-  background-color: #999999;
+  background-color: $dark-color-secondary;
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -259,9 +241,9 @@ footer {
   right: auto;
   bottom: -14px;
   border-left: 14px solid transparent;
-  border-bottom: 14px solid #fff;
+  border-bottom: 14px solid $light-color;
   border-bottom-width: 0;
-  border-top: 0 solid #fff;
+  border-top: 0 solid $light-color;
   border-top-width: 14px;
   border-right: 14px solid transparent;
   content: " ";
