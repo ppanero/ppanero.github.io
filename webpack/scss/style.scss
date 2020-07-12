@@ -49,12 +49,12 @@ header, footer, div.page {
   color: $dark-title-color;
 }
 
-/* Footer */
+/* About me*/
+/*---------*/
 
-footer {
-    padding: 20px 30px;
-    color: $footer-text-color;
-    background-color: $footer-bg-color;
+.about-me {
+  color: $light-color;
+  text-align: center;
 }
 
 /* Experience timeline */
@@ -247,4 +247,12 @@ footer {
   border-top-width: 14px;
   border-right: 14px solid transparent;
   content: " ";
+}
+
+/* Footer */
+
+footer {
+  padding: 20px 30px;
+  color: $footer-text-color;
+  background-color: $footer-bg-color;
 }
