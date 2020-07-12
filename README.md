@@ -18,12 +18,23 @@ ways):
 $ curl -sf https://www.getlektor.com/install.sh | sh
 ```
 
+Add the webpack plugin and install the required libraries:
+
+```console
+$ lektor plugins add webpack-support
+$ cd webpack
+$ npm install
+```
+
+**IMPORTANT NOTE**: All webpack related files are in the `/webpack` folder
+since the plugin expects said folder to exist.
+
 Next, go into the root directory of the repository and run
 the following command and open
 [localhost:5000](http://localhost:5000/) in your browser afterwards:
 
 ```console
-$ lektor server
+$ lektor server -f webpack
 ```
 
 Lektor provided an installable version on macOS, but it is no longer supported.
