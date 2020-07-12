@@ -12,31 +12,65 @@ a:hover {
 }
 
 header, footer, div.page {
-    width: 760px;
+    width: 100%;
     margin: 0 auto;
-    background: #daeef3;
+}
+
+/* Section background*/
+.section-content-white-bg,
+.section-content-light-bg {
+  padding-top: calc(3 * 30px);
+  padding-bottom: calc(3 * 30px);
+}
+
+.section-content-white-bg a,
+.section-content-light-bg a {
+  text-decoration: none;
+  color: #0377cdb5;
+  font-weight: 600;
+}
+.section-content-white-bg a:hover,
+.section-content-white-bg a:focus,
+.section-content-light-bg a:hover,
+.section-content-light-bg a:focus {
+  color: #0377cd;
+}
+.section-content-white-bg,
+.section-content-light-bg {
+  color: #333;
+  width: 100%;
+  text-align: justify;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.section-content-white-bg {
+  background-color: #fff;
+}
+.section-content-light-bg {
+  background-color: rgba(173, 206, 224, 0.52);
+}
+.section-content-white-bg h6,
+.section-content-light-bg h6 {
+  font-weight: 300;
+  font-size: 1.4em;
+  padding-bottom: 10px;
+  color: #0377cd;
+}
+
+.section-title {
+    -webkit-font-smoothing: antialiased;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #0377cd;
+    margin-bottom: 45px;
+    font-weight: 500;
+}
+
+/* Footer */
+
+footer {
     padding: 20px 30px;
-}
-
-header h1 {
-    color: #169bbd;
-    margin: 0;
-    font-weight: normal;
-    font-size: 42px;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 8px 0 0;
-    padding: 0;
-}
-
-div.page {
-    background: #f1fbfe;
+    background-color: #0377cd;
 }
