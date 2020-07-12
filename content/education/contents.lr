@@ -1,0 +1,6 @@
+_model: education
+---
+_template: macros/education.html
+---
+title: Education
+---
