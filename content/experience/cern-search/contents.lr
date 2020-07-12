@@ -1,0 +1,17 @@
+meta_name: cern-search
+---
+start_date: Feb 2018
+---
+company: CERN
+---
+company_extra: IT-CDA-WF
+---
+description: Lead developer of the new generation of CERN Search as a Service
+---
+end_date: June 2019
+---
+technologies: Python, React, Elasticsearch, OpenShift, RabbitMQ, Invenio
+---
+title: Software Engineer
+---
+_template: macros/experience.html

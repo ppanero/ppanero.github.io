@@ -1,0 +1,19 @@
+<div class="container">
+    <ul class="timeline">
+      {% set jobs = site.query('/experience').all() %}
+      {%- for job in jobs %}
+      <li>
+        <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">{{ job.title }}</h4>
+            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{ job.technologies }}</small></p>
+          </div>
+          <div class="timeline-body">
+            {{job.description}}
+          </div>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>

@@ -1,0 +1,17 @@
+meta_name: cern-inveniordm
+---
+start_date: June 2019
+---
+end_date: Present
+---
+title: Software Engineer
+---
+company: CERN
+---
+company_extra: IT-CDA-DR
+---
+technologies: Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio
+---
+description: Core developer of the Invenio Research Data Management platform (InvenioRDM) and core maintainer of Invenio Framework modules.
+---
+_template: macros/experience.html

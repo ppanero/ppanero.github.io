@@ -1,0 +1,17 @@
+meta_name: cern-security
+---
+start_date: Feb 2017
+---
+company: CERN
+---
+company_extra: IT-DI-CSO
+---
+description: Core developer of the Compute Security Team’s infrastructure
+---
+end_date: Feb 2018
+---
+technologies: Python, Scala, PHP, Spark, Kafka, Flume, YARN, Mesos, Puppet, Docker
+---
+title: Big Data Engineer
+---
+_template: macros/experience.html
