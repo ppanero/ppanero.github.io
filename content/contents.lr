@@ -1,6 +1,3 @@
-title: Welcome to ppanero.github.io!
+_model:index
 ---
-body:
-
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages.
+title: Welcome
