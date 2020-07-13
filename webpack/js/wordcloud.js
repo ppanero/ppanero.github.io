@@ -56,6 +56,7 @@ window.addEventListener('load', function () {
     .size([width, height])
     .words(myWords.map(function(d) { return {text: d.word, props: [d.size, d.cat]}; }))
     .padding(5) //space between words
+    .rotate(function() { return ~~(Math.random() * 2) * 90; })
     .fontSize(function(d) { return d.props[0]; })      // font size of words
     .on("end", draw);
   layout.start();
