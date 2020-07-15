@@ -3,14 +3,24 @@
         {% set studies = site.query('/education').all() %}
         {%- for study in studies %}
         <li class="timeline-item">
-            <div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
+            <div class="timeline-badge primary"><i class="{{ study.icon }}"></i></div>
+            <div class="timeline-panel education-panel">
                 <div class="timeline-heading">
-                    <h4 class="timeline-title">{{ study.title}}</h4>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{ study.country }}</small></p>
+                    <div class="education-title">{{ study.title }}</div>
                 </div>
                 <div class="timeline-body">
-                    <p>{{ study.university }}</p>
+                    <p class="text-muted">
+                        <i class="fa fa-map-marker"></i>
+                        {{ study.country }}
+                    </p>
+                    <p class="text-muted">
+                        <i class="fa fa-calendar"></i>
+                        {{ study.start_date}} - {{ study.end_date}}
+                    </p>
+                    <p class="text-muted">
+                        <i class="fa fa-university"></i>
+                        {{ study.university }}
+                    </p>
                 </div>
             </div>
         </li>

@@ -2,11 +2,13 @@ start_date: 2011
 ---
 end_date: 2016
 ---
-title: BSc., Computer Science Engineering
+title: BSc. Computer Science Engineering
 ---
 university: Universidad Complutense de Madrid
 ---
 country: Madrid, Spain
+---
+icon: fa fa-laptop
 ---
 extra: Graduated with extra credits
 ---

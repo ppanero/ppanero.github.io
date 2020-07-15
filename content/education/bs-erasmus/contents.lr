@@ -8,6 +8,8 @@ university: Oulun Yliopisto
 ---
 country: Oulu, Finland
 ---
+icon: fa fa-globe
+---
 extra:
 ---
 _template: macros/education.html
