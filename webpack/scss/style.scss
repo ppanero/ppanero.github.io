@@ -10,6 +10,10 @@ header, footer, div.page {
     margin: 0 auto;
 }
 
+.container {
+  text-align: center;
+}
+
 /* Section background*/
 .section-content-dark-bg,
 .section-content-light-bg {
@@ -33,20 +37,26 @@ header, footer, div.page {
 
 .section-title {
     -webkit-font-smoothing: antialiased;
-    font-size: 2em;
+    font-size: 3em;
     width: 100%;
     text-align: center;
-    display: block;
+    display: inline-block;
+    width: 50%;
     margin-bottom: 45px;
-    font-weight: 500;
+    font-weight: bold;
+    // border
+    border-width: 0px 0px 2px 0; /* top right bottom left */
+    border-style: solid dotted inset double;
 }
 
 .section-content-light-bg .section-title {
     color: $light-title-color;
+    border-color: $light-title-color;
 }
 
 .section-content-dark-bg .section-title {
   color: black;
+  border-color: black;
 }
 
 /* About me*/
