@@ -59,6 +59,27 @@ header, footer, div.page {
   border-color: black;
 }
 
+/* Header */
+/*---------*/
+
+.navbar {
+  width: 100%;
+  background-color: black;
+}
+
+.navbar a,
+.navbar a:hover {
+  color: $light-color;
+}
+
+.navbar a:hover {
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-right: 50px;
+}
+
 /* About me*/
 /*---------*/
 

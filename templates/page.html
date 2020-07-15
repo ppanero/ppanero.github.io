@@ -1,8 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
+{% include "macros/header.html" %}
 <section class="section-content-light-bg">
   <div class="container">
-    <span class="section-title">Who am I?</span>
+    <span class="section-title" id="who-am-i">Who am I?</span>
     <div class="row">
       {% include "macros/about-me.html" %}
     </div>
@@ -10,7 +11,7 @@
 </section>
 <section class="section-content-dark-bg">
   <div class="container">
-    <span class="section-title">Experience</span>
+    <span class="section-title" id="experience">Experience</span>
     <div class="row">
       {% include "macros/experience.html" %}
     </div>
@@ -18,7 +19,7 @@
 </section>
 <section id="products" class="section-content-light-bg">
   <div class="container">
-    <span class="section-title">Skills</span>
+    <span class="section-title" id="skills">Skills</span>
     <div class="row">
       {% include "macros/skills.html" %}
     </div>
@@ -26,7 +27,15 @@
 </section>
 <section class="section-content-dark-bg">
   <div class="container">
-    <span class="section-title">Education</span>
+    <span class="section-title" id="publications">Publications</span>
+    <div class="row">
+      {% include "macros/publications.html" %}
+    </div>
+  </div>
+</section>
+<section class="section-content-dark-bg">
+  <div class="container">
+    <span class="section-title" id="education">Education</span>
     <div class="row">
       {% include "macros/education.html" %}
     </div>
