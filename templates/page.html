@@ -48,4 +48,15 @@
     </div>
   </div>
 </section>
-{% endblock body%}
+{% endblock body %}
+
+{% block footer %}
+<div class="container footer-content">
+<div class="col-sm-6 float-left">
+  &copy; Copyright 2020 by Pablo Panero.
+</div>
+<div class="col-sm-6 float-right footer-media">
+  {% include "macros/footer-media.html" %}
+</div>
+</div>
+{% endblock footer %}

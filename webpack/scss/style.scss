@@ -258,7 +258,35 @@ header, footer, div.page {
 /* Footer */
 
 footer {
-  padding: 20px 30px;
+  // padding: 40px 0px;
   color: $footer-text-color;
   background-color: $footer-bg-color;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.footer-media {
+  text-align: right;
+}
+
+.footer-media ul{
+  margin: 0px;
+}
+
+.footer-media-item {
+  display: inline-block;
+  font-size: 2em;
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.footer-media-item a,
+.footer-media-item a:hover {
+  color: $light-color;
 }

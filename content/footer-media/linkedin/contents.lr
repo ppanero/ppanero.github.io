@@ -1,0 +1,7 @@
+name: LinkedIn
+---
+link: https://www.linkedin.com/in/ppanero/
+---
+icon: fa fa-linkedin-square
+---
+_template: macros/footer-media.html

@@ -1,0 +1,8 @@
+<ul>
+    {% set media = site.query('/footer-media').all() %}
+    {%- for media_item in media %}
+    <li class="footer-media-item">
+        <a href="{{ media_item.link }}" target="_blank"><i class="{{ media_item.icon }}"></i></a>
+    </li>
+    {%- endfor %}
+</ul>
