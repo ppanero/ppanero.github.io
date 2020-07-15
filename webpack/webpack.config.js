@@ -5,6 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
+    'arrow': './js/arrow.js',
     'wordcloud': './js/wordcloud.js',
     'style': './scss/style.scss'
   },
