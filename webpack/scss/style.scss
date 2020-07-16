@@ -64,7 +64,7 @@ header, footer, div.page {
 
 .navbar {
   width: 100%;
-  background-color: rgba(47, 47, 47, 0.72);
+  background-color: $header-bg-color;
 }
 
 .navbar a,
@@ -351,7 +351,6 @@ footer {
   // padding: 40px 0px;
   color: $footer-text-color;
   background-color: $footer-bg-color;
-
 }
 
 .footer-content {
