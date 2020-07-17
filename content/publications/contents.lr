@@ -1,0 +1,6 @@
+_model: publications
+---
+_template: macros/publications.html
+---
+title: Publications
+---
