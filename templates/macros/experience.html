@@ -1,19 +1,39 @@
-<div class="container">
-    <ul class="timeline">
-      {% set jobs = site.query('/experience').all() %}
-      {%- for job in jobs %}
-      <li>
-        <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4 class="timeline-title">{{ job.title }}</h4>
-            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{ job.technologies }}</small></p>
+<ul class="timeline">
+  {% set jobs = site.query('/experience').all() %}
+  {%- for job in jobs %}
+  <li>
+    <!-- <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date"> -->
+    <div class="row justify-content-md-center">
+      <div class="col-2 order-1 timeline-dates">
+        <p>{{ job.start_date }}</p>
+        <p>{{ job.end_date }}</p>
+      </div>
+      <!-- <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center timeline-badge"> -->
+      <div class="col-1 order-2 timeline-badge">
+        <img src="{{ job.company_logo | asseturl }}">
+      </div>
+      <div class="col-9 order-3 timeline-panel">
+        <div class="timeline-heading">
+          <div class="row ml-1">
+            <p class="experience-title">{{ job.title }}</p>
+            <div class="ml-auto mr-3">{{ job.company }}</div>
           </div>
-          <div class="timeline-body">
-            {{job.description}}
+          <div class="timeline-sub-heading">
+            <p class="text-muted">
+              <i class="experienc-icon fa fa-map-marker"></i>
+              {{ job.country }}
+            </p>
+            <p class="text-muted">
+              <i class="experienc-icon fa fa-cogs"></i>
+              {{ job.technologies }}
+            </p>
           </div>
         </div>
-      </li>
-      {%- endfor %}
-    </ul>
-  </div>
+        <div class="timeline-body">
+          {{job.description}}
+        </div>
+      </div>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

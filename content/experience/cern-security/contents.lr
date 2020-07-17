@@ -1,14 +1,16 @@
 meta_name: cern-security
 ---
-start_date: Feb 2017
+start_date: Feb 17
 ---
 company: CERN
 ---
-company_extra: IT-DI-CSO
+company_logo: static/img/logo-cern.png
+---
+country: Geneva (Switzerland)
 ---
 description: Core developer of the Compute Security Team’s infrastructure
 ---
-end_date: Feb 2018
+end_date: Feb 18
 ---
 technologies: Python, Scala, PHP, Spark, Kafka, Flume, YARN, Mesos, Puppet, Docker
 ---

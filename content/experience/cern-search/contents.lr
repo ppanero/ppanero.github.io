@@ -1,14 +1,16 @@
 meta_name: cern-search
 ---
-start_date: Feb 2018
+start_date: Feb 18
 ---
 company: CERN
 ---
-company_extra: IT-CDA-WF
+company_logo: static/img/logo-cern.png
+---
+country: Geneva (Switzerland)
 ---
 description: Lead developer of the new generation of CERN Search as a Service
 ---
-end_date: June 2019
+end_date: June 19
 ---
 technologies: Python, React, Elasticsearch, OpenShift, RabbitMQ, Invenio
 ---

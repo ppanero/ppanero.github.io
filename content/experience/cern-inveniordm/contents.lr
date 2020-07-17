@@ -1,6 +1,6 @@
 meta_name: cern-inveniordm
 ---
-start_date: June 2019
+start_date: June 19
 ---
 end_date: Present
 ---
@@ -8,7 +8,9 @@ title: Software Engineer
 ---
 company: CERN
 ---
-company_extra: IT-CDA-DR
+company_logo: static/img/logo-cern.png
+---
+country: Geneva (Switzerland)
 ---
 technologies: Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio
 ---
