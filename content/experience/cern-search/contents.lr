@@ -10,7 +10,7 @@ country: Geneva (Switzerland)
 ---
 description: Lead developer of the new generation of CERN Search as a Service
 ---
-end_date: June 19
+end_date: Jun 19
 ---
 technologies: Python, React, Elasticsearch, OpenShift, RabbitMQ, Invenio
 ---
