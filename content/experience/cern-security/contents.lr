@@ -8,7 +8,14 @@ company_logo: static/img/logo-cern.png
 ---
 country: Geneva (Switzerland)
 ---
-description: Core developer of the Compute Security Team’s infrastructure
+description: Core developer of the Compute Security Team’s infrastructure:
+
+- Core developer of a **large scale intrusion detection system** capable of 
+ingesting 500GB of data per day, and enriching and analyzing in real time data 
+pipelines with 50.000 events per second.
+- Develop new features for the Malware Information Sharing Platform (MISP) 
+instances of CERN and WLCG. **Maintain both production instances**.
+- Scripting and forensic analysis tasks for computer security incidents.
 ---
 end_date: Feb 18
 ---

@@ -14,6 +14,22 @@ country: Geneva (Switzerland)
 ---
 technologies: Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio
 ---
-description: Core developer of the Invenio Research Data Management platform (InvenioRDM) and core maintainer of Invenio Framework modules.
+description: Core developer of the Invenio Research Data Management platform 
+([InvenioRDM](https://inveniosoftware.org/products/rdm/)) and core maintainer of 
+[Invenio Framework](https://inveniosoftware.org/products/framework/) modules:
+
+- Core developer of a project with more than 18 partners. Assist in the organisation
+of meetings and workshops of more than 30 people.
+- ContributeandmaintainmodulesoftheInvenioSoftwareorganisation, consisting of more
+than 130 modules.
+- Redesign and implement core packages to build the RESTful APIs.
+- Develop Helm charts and automate the deployment of instances in OpenShift.
+- Design and implement the repository data model, including Elastic- search mappings.
+- Carry out user feedback sessions and help identify UX/UI improve- ments.
+
+**Lead a working group** to identify and tackle problems in order to make meetings
+more efficient, as well as guidelines and meetings success met- rics.
+
+**Lead and help organising sprints of 6 software engineers**.
 ---
 _template: macros/experience.html

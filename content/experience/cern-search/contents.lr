@@ -8,7 +8,19 @@ company_logo: static/img/logo-cern.png
 ---
 country: Geneva (Switzerland)
 ---
-description: Lead developer of the new generation of CERN Search as a Service
+description: Lead developer of the new generation of CERN Search as a Service:
+
+- **Develop from scratch the production version of the system in under two years
+time**. The system indexes and searches over 24.000.000 documents.
+- DeployandmaintainthepilotinstancefortheCERN’sEngineeringData Management Service.
+- Support the CERN’s and FermiLab’s Indico team on their integration with the CERN
+Search Service.
+- Contribute to modules of the Invenio Software organisation.
+- Develop and **deploy in production** a crawler to harvest the content from the
+whole CERN websphere.
+- Optimize Elasticsearch mappings and search scoring functions.
+- Develop the new CERN Search website.
+
 ---
 end_date: Jun 19
 ---

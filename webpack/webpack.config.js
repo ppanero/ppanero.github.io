@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     'arrow': './js/arrow.js',
     'wordcloud': './js/wordcloud.js',
+    'experience': './js/experience.js',
     'style': './scss/style.scss'
   },
   output: {
