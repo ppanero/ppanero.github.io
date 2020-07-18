@@ -8,7 +8,9 @@
         <p>{{ job.start_date }}</p>
       </div>
       <div class="col-md-1 order-2 timeline-badge">
-        <img src="{{ job.company_logo | asseturl }}">
+        <div class="experience-circle">
+          <img src="{{ job.company_logo | asseturl }}">
+        </div>
       </div>
       <div class="col-md-10 order-3 timeline-panel">
         <div class="timeline-heading">
