@@ -1,8 +1,8 @@
-<ul class="timeline">
+<ul id="exp-list" class="timeline">
   {% set jobs = site.query('/experience').all() %}
   {%- for job in jobs %}
   <li>
-    <div class="row justify-content-md-center">
+    <div class="{% if loop.index > 3 %}d-none{% endif %} row justify-content-md-center">
       <div class="col-md-1 order-1 timeline-dates">
         <p>{{ job.end_date }}</p>
         <p>{{ job.start_date }}</p>
@@ -33,7 +33,7 @@
           <div class="content hide-content">
             {{job.description}}
           </div>
-          <div id="more-exp" class="show-more">
+          <div id="more-exp" class="show-more-job">
             <p>[more]</p>
           </div>
         </div>

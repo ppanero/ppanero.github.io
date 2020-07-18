@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    $(".show-more p").on("click", function() {
+    $(".show-more-job p").click(function() {
         var $this = $(this); 
         var $content = $this.parent().prev("div.content");
         var linkText = $this.text();    
@@ -13,5 +13,9 @@ window.addEventListener('load', function () {
         };
 
         $this.text(linkText);
+    });
+
+    $('.show-more-exp').click(function () {
+        $('#exp-list .d-none').slice(0, 2).removeClass("d-none");
     });
 })
