@@ -33,9 +33,11 @@
           <div class="content hide-content">
             {{job.description}}
           </div>
-          <div id="more-exp" class="show-more-job">
-            <p>[more]</p>
+          {% if job.show_more %}
+          <div class="show-more-btn">
+            <button class="btn btn-primary btn-sm" id="show-more-job">Read more</button>
           </div>
+          {% endif %}
         </div>
       </div>
     </div>

@@ -136,26 +136,17 @@
   margin-bottom: 0;
 }
 
-.hide-content {
-  overflow: hidden;
-  line-height: 1em;
-  height: 2em;
-}
-
-.show-content {
-  line-height: 1em;
-  height: auto;
-}
-.show-content{
-  height: auto;
-}
-
-.show-more-job, .show-more-exp {
+.show-more-exp {
   color: #007bff;
   text-align: center;
   margin: 5px;
 }
 
-.show-more-job p:hover {
-  text-decoration: underline;
+.show-more-btn {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#more-text {
+  display: none;
 }

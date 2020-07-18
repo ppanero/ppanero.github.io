@@ -16,7 +16,8 @@ technologies: Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio
 ---
 description: Core developer of the Invenio Research Data Management platform 
 ([InvenioRDM](https://inveniosoftware.org/products/rdm/)) and core maintainer of 
-[Invenio Framework](https://inveniosoftware.org/products/framework/) modules:
+[Invenio Framework](https://inveniosoftware.org/products/framework/)
+modules<span id="dots">...</span><span id="more-text">:
 
 - Core developer of a project with more than 18 partners. Assist in the organisation
 of meetings and workshops of more than 30 people.
@@ -30,6 +31,8 @@ than 130 modules.
 **Lead a working group** to identify and tackle problems in order to make meetings
 more efficient, as well as guidelines and meetings success met- rics.
 
-**Lead and help organising sprints of 6 software engineers**.
+**Lead and help organising sprints of 6 software engineers**.</span>
+---
+show_more: true
 ---
 _template: macros/experience.html
