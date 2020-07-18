@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    $('.show-more-exp').click(function () {
+    $('#show-more-exp').click(function () {
         $('#exp-list .d-none').slice(0, 2).removeClass("d-none");
     });
 
