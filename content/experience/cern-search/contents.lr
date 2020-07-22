@@ -8,8 +8,8 @@ company_logo: static/img/logo-cern.png
 ---
 country: Geneva (Switzerland)
 ---
-description: Lead developer of the new generation of CERN Search as a
-Service<span id="dots">...</span><span id="more-text">:
+description: <b>Lead developer of the new generation of <a href="https://cern-search.docs.cern.ch">
+CERN Search as a Service</a></b><span id="dots">...</span><span id="more-text">:
 <ul>
     <li><b>Develop from scratch the production version of the system in under
     two years time</b>. The system indexes and searches over 24.000.000 documents.</li>
