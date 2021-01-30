@@ -1,3 +1,6 @@
+# NPM files
 *package-lock.json
-webpack/node_modules
-assets/static/gen
+/node_modules
+
+# Webpack build
+dist/
