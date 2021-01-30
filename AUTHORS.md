@@ -1,4 +1,0 @@
-Authors
-=======
-
-- Pablo Panero

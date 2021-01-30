@@ -1,8 +1,0 @@
-[project]
-name = ppanero.github.io
-
-[servers.master]
-target = ghpages+https://ppanero/ppanero.github.io
-
-[packages]
-lektor-webpack-support = 0.5
