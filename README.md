@@ -2,9 +2,9 @@
 
 \#React \#Webpack \#PersonalSite
 
-This repository contains the code currently avaialble at https://ppanero.github.io.
+This repository contains the code currently running at https://ppanero.github.io.
 
-This project is based on [react-resume-template](https://github.com/tbakerx/react-resume-template), which helped inspired and served as base to this project. However, it is stripped of its complexity to suit the needs. In addition, **assets management** has been migrated to use **webpack** instead of having them downloaded locally.
+This project is based on [react-resume-template](https://github.com/tbakerx/react-resume-template), which helped inspired and served as starting point. However, it is stripped of its complexity to suit the needs. In addition, **assets management** has been migrated to use **webpack** instead of having them downloaded locally.
 
 ESLint is used for webpack and react to conform to the standards.
 
