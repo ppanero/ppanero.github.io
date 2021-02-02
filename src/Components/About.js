@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap'; 
 
+import ProfilePic from '../../assets/images/profilepic.jpg';
+
 class About extends Component {
   render() {
 
     if(this.props.data){
-      var profilepic= "../../assets/images/"+this.props.data.image;
       var bio = this.props.data.bio;
       var email = this.props.data.email;
     }
@@ -14,7 +15,7 @@ class About extends Component {
       <Container fluid id="about" className="about">
         <Row className="justify-content-md-center">
           <Col md={2} className="profile-pic-container">
-            <Image roundedCircle className="profile-pic" src={profilepic} alt="Pablo Panero's Profile Pic"/>
+            <Image roundedCircle className="profile-pic" src={ProfilePic} alt="Pablo Panero's Profile Pic"/>
           </Col>
           <Col md={6}>
               <Row>

@@ -3,7 +3,6 @@
     "name":"Pablo Panero",
     "occupation":"Software Engineer",
     "description":"Currently working at <a href=\"https://zenodo.org\">Zenodo</a>.",
-    "image":"profilepic.jpg",
     "bio":"I'm pasionate about designing and building in large scale systems, really curious about algorithms on distributed systems, and a long etcetera that could be summarized in \"I like to solve problems\". On my free time I love dancing, playing music and disconnecting in the nature. I also like philosophy and the misteries of the mind such as \"How is it possible for thousands of clusters to arrive to a consensus faster than a group of friends on a trip\".",
     "email": "pablopanerovz@gmail.com",
     "address":{
