@@ -3,7 +3,7 @@ import ReactHtmlParser from 'react-html-parser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import {Col, Container, Row} from 'react-bootstrap';
+import {Col, Container, ListGroup, Row} from 'react-bootstrap';
 
 class Header extends Component {
   render() {
@@ -24,23 +24,23 @@ class Header extends Component {
             <h1>I'm {name}</h1>
             <h3>... a {occupation} based in {city}, {country}. {description}</h3>
             <hr />
-            <ul className="social">
-              <li key="mail">
+            <ListGroup horizontal flush className="social justify-content-md-center">
+              <ListGroup.Item key="mail">
                 <a href="mailto:pablopanerovz@gmail.com">
                   <FontAwesomeIcon icon={faEnvelope}/>
                 </a>
-              </li>
-              <li key="linkedin">
+              </ListGroup.Item>
+              <ListGroup.Item key="linkedin">
                 <a href="https://www.linkedin.com/in/ppanero/">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
-              </li>
-              <li key="github">
+              </ListGroup.Item>
+              <ListGroup.Item key="github">
                 <a href="http://github.com/ppanero">
                   <FontAwesomeIcon icon={faGithubSquare}/>
                 </a>
-              </li>
-            </ul>
+              </ListGroup.Item>
+            </ListGroup>
           </div>
           </Col>
         </Row>
