@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import axios from "axios";
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
+
+import data from '../assets/data/info.json';
 
 class App extends Component {
 
@@ -15,14 +16,9 @@ class App extends Component {
   }
 
   getInfo(){
-    axios.get(
-      '/assets/data/info.json',
-      { headers: { "Accet": "application/json"} }
-    ).then(result => {
-      if (this._isMounted) {
-        this.setState({ information: result.data })
-      }
-    });
+    if (this._isMounted) {
+      this.setState({ information: data })
+    }
   }
 
   componentDidMount(){
