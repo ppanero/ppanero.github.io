@@ -5,7 +5,7 @@ class About extends Component {
   render() {
 
     if(this.props.data){
-      var profilepic= "/assets/images/"+this.props.data.image;
+      var profilepic= "../../assets/images/"+this.props.data.image;
       var bio = this.props.data.bio;
       var email = this.props.data.email;
     }
