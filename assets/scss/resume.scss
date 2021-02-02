@@ -1,0 +1,8 @@
+@import "./variables.scss";
+
+.resume {
+  background: $background-color-light;
+  color: $text-color-dark;
+  font: $font-size-medium $text-font;
+  padding: 40px 0px;
+}

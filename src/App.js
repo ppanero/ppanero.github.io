@@ -3,6 +3,7 @@ import About from './Components/About';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
+import Resume from './Components/Resume';
 
 import data from '../assets/data/info.json';
 
@@ -37,6 +38,7 @@ class App extends Component {
         <Header/>
         <Home data={this.state.information.personal}/>
         <About data={this.state.information.personal}/>
+        <Resume/>
         <Footer/>
       </div>
     );
