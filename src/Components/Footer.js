@@ -11,7 +11,7 @@ class Footer extends Component {
       <Container fluid className="footer">
         <Row>
           <Col lg={true}>
-            <ListGroup horizontal flush className="social justify-content-md-center">
+            <ListGroup horizontal className="social justify-content-md-center">
             <ListGroup.Item key="mail">
                 <a href="mailto:pablopanerovz@gmail.com">
                   <FontAwesomeIcon icon={faEnvelope}/>

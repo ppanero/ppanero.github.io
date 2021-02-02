@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+.about {
+  background: $background-color-dark;
+  color: $text-color-light;
+  font: $font-size-medium $text-font;
+  padding: 40px 0px;
+}
+
+.profile-pic-container {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+}

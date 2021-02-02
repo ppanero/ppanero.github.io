@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import About from './Components/About';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
@@ -35,6 +36,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Home data={this.state.information.personal}/>
+        <About data={this.state.information.personal}/>
         <Footer/>
       </div>
     );

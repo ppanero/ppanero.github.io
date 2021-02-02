@@ -24,7 +24,7 @@ class Header extends Component {
             <h1>I'm {name}</h1>
             <h3>... a {occupation} based in {city}, {country}. {description}</h3>
             <hr />
-            <ListGroup horizontal flush className="social justify-content-md-center">
+            <ListGroup horizontal className="social justify-content-md-center">
               <ListGroup.Item key="mail">
                 <a href="mailto:pablopanerovz@gmail.com">
                   <FontAwesomeIcon icon={faEnvelope}/>
