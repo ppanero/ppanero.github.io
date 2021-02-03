@@ -19,7 +19,7 @@ class Header extends Component {
     return (
       <Container className="home" fluid>
         <Row className="justify-content-md-center">
-          <Col lg={true}>
+          <Col md={8}>
           <div className="banner-text">
             <h1>I'm {name}</h1>
             <h3>... a {occupation} based in {city}, {country}. {description}</h3>
