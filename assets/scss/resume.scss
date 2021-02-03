@@ -14,15 +14,26 @@
   border-bottom: 3px solid $text-color-dark;
 }
 
-/* Education */
+/* Images */
 
-.education-item-image {
+.work-item-image, .education-item-image {
   text-align: center;
 }
 
-.education img {
+.work img, .education img {
   max-width: 75px;
 }
+
+/* Work Experience */
+
+.work-item-roles p {
+  padding-inline-start: 10px;
+}
+
+.work-item-roles p {
+  margin-bottom: 10px;
+}
+
 
 /* Publications */
 .publication a { 

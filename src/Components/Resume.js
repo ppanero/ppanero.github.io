@@ -9,10 +9,24 @@ class Resume extends Component {
   render() {
     if(this.props.data){
       var workExperience = this.props.data.work.map(function(work){
-        return <div key={work.years}><h3>{work.title}</h3>
-            <p>{work.company}<span>&bull;</span> <em>{work.years}</em></p>
-            <p>{ ReactHtmlParser(work.description) }</p>
-        </div>
+        return (
+          <Row key={work.years}>
+            <Col md={2} className="work-item-image">
+              <Image src={images(`./work/${work.icon}`).default} rounded />
+            </Col>
+            <Col md={10}>
+              <h3>{work.title}</h3>
+              <p>{work.company}<span>&bull;</span> <em>{work.years}</em></p>
+              <p>{ ReactHtmlParser(work.description) }</p>
+              <ul className="work-item-roles"> { /*Better styling than ListGroup for the needs of this section */ }
+                { work.roles.map(function(role, index){
+                  return <li key={index} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
+                })}
+              </ul>
+              
+            </Col>
+          </Row>
+        )
       });
 
       var education = this.props.data.education.map(function(education) {
@@ -22,9 +36,9 @@ class Resume extends Component {
               <Image src={images(`./education/${education.icon}`).default} rounded />
             </Col>
             <Col md={10}>
-              <div key={education.school}><h3>{education.school}</h3>
-              <p>{education.degree} <span>&bull;</span><em>{education.graduated}</em></p>
-              <p>{education.description}</p></div>
+              <h3>{education.school}</h3>
+              <p>{education.degree} <span>&bull;</span> <em>{education.graduated}</em></p>
+              <p>{education.description}</p>
             </Col>
           </Row>
         )
@@ -32,9 +46,9 @@ class Resume extends Component {
 
       var publications = this.props.data.publications.map(function(publications){
         return (
-          <div className="publication" key={publications.key}>
+          <Row  className="publication" key={publications.key}>
             <p>{ ReactHtmlParser(publications.reference) }</p>
-          </div>
+          </Row >
         )
       });
     }
@@ -47,8 +61,7 @@ class Resume extends Component {
               <Col md={3} className="resume-header">
                   <h1><span>Work</span></h1>
               </Col>
-
-              <Col md={9}>
+              <Col md={9} className="work">
                 { workExperience }
               </Col>
             </Row>
@@ -57,7 +70,6 @@ class Resume extends Component {
               <Col md={3} className="resume-header">
                   <h1><span>Education</span></h1>
               </Col>
-
               <Col md={9} className="education">
                 { education }
               </Col>
@@ -67,7 +79,6 @@ class Resume extends Component {
               <Col md={3} className="resume-header">
                   <h1><span>Publications</span></h1>
               </Col>
-
               <Col md={9}>
                 { publications }
               </Col>

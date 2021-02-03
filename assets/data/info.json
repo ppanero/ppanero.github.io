@@ -27,7 +27,7 @@
         ],
         "technologies": "Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio, PostgreSQL, Redis",
         "country": "Geneve, Switzerland",
-        "logo": "logo-cern.jpg"
+        "icon": "cern.png"
       },
       {
         "company": "CERN",
@@ -45,7 +45,7 @@
         ],
         "technologies": "Python, React, Elasticsearch, OpenShift, RabbitMQ, Invenio, PostgreSQL, Redis",
         "country": "Geneve, Switzerland",
-        "logo": "logo-cern.jpg"
+        "icon": "cern.png"
       },
       {
         "company": "CERN",
@@ -59,61 +59,67 @@
         ],
         "technologies": "Python, Scala, PHP, Spark, Kafka, Flume, YARN, Mesos, Puppet, Docker",
         "country": "Geneve, Switzerland",
-        "logo": "logo-cern.jpg"
+        "icon": "cern.png"
       },
       {
         "company": "NewProLab",
         "title": "Big Data Instructor",
         "years": "Nov 2016 - Nov 2017",
         "description": "Design and instruct both in-person and online Big Data courses.",
+        "roles": [],
         "technologies": "Hadoop, Spark, Kafka, Flume, Hive, Pig, Impala, Sqoop, Cloudera, Hortonworks, YARN",
         "country": "Luxemburg, Luxemburg",
-        "logo": "logo-npl.jpg"
+        "icon": "npl.png"
       },
       {
         "company": "Citizen Cyberlab",
         "title": "Full Stack Developer",
         "years": "Oct 2016 - Feb 2017",
         "description": "Develop and integrate the ”SDG Hunter” mobile application as part of the Sustainable Development Goals initiative.",
+        "roles": [],
         "technologies": "Android, AWS, DynamoDB, S3",
         "country": "Geneve, Switzerland (Remote)",
-        "logo": "logo-ccc.jpg"
+        "icon": "cern.png"
       },
       {
         "company": "CERN",
         "title": "Computer Security Engineer Intern",
         "years": "Jun 2016 - Oct 2016",
         "description": "Develop the Single Sign-On, BroIDS export and Puppet modules for the MISP platform. Deploy all modules in CERN’s production instance. The two first modules were added to the open source code base of the MISP project, and the last one is part of the Vox Pupuli Puppet organisation.",
+        "roles": [],
         "technologies": "PHP, Puppet, SSO, Shibboleth, BroIDS",
         "country": "Geneve, Switzerland",
-        "logo": "logo-cern.jpg"
+        "icon": "cern.png"
       },
       {
         "company": "Universidad Complutense de Madrid",
         "title": "Research Fellow",
         "years": "Oct 2015 - Jun 2016",
         "description": "Lead developer of a disease outbreak inference system. Deploy the beta version of the system and carry out the first testing phase with real users.",
+        "roles": [],
         "technologies": "Java, Python, JavaScript, Spark, Flask, Spring REST, MongoDB, MySQL, Hibernate",
         "country": "Madrid, Spain",
-        "logo": "logo-fdi.jpg"
+        "icon": "fdi.jpg"
       },
       {
         "company": "Pragsis Bidoop",
         "title": "Big Data Developer Intern",
         "years": "Oct 2015 - Feb 2016",
         "description": "Develop and deploy data processing pipelines for a user profiling platform.",
+        "roles": [],
         "technologies": "Java, Spark, Oozie, Hortonworks, YARN",
         "country": "Madrid, Spain",
-        "logo": "logo-pragsis.jpg"
+        "icon": "pragsis.jpg"
       },
       {
         "company": "Fon",
         "title": "Quality Assurance Intern",
         "years": "Jun 2015 - October 2015",
         "description": "Test mobile and web applications, and troubleshoot problems in production environments.",
+        "roles": [],
         "technologies": "Java, Soap UI, Selenium, Appium, TestNG, MySQL, Troubleshooting",
         "country": "Madrid, Spain",
-        "logo": "logo-fon.jpg"
+        "icon": "fon.jpg"
       }
     ],
     "skills":[
@@ -176,7 +182,7 @@
         "school":"Oulun Yliopisto",
         "degree":"Erasmus+ Exchange (Oulu, Finland)",
         "graduated":"2014-2015",
-        "description":"Courses on distributed computing, ubiquitous computing and user centered research.",
+        "description":"Courses in distributed computing, ubiquitous computing and user centered research.",
         "icon": "oulun_yliopisto.png"
       },
       {
