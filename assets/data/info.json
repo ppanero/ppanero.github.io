@@ -9,5 +9,180 @@
       "city":"Geneva",
       "country":"Switzerland"
     }
+  },
+  "resume":{
+    "work":[
+      {
+        "company": "CERN",
+        "title": "Software Engineer",
+        "years": "Jun 2019 - Jan 2021",
+        "description": "<b>Core developer of the Invenio Research Data Management platform (<a href=\"https://inveniosoftware.org/products/rdm/\">InvenioRDM</a>) and core maintainer of <a href=\"https://inveniosoftware.org/products/framework/\"> Invenio Framework</a> modules",
+        "roles": [
+          "Core developer of a project with more than 18 partners. Assist in the organisation of meetings and workshops of more than 30 people.",
+          "Contribute and maintain modules of the Invenio Software organisation, consisting of more than 130 modules.",
+          "Redesign and implement core packages to build the RESTful APIs.",
+          "Develop Helm charts and automate the deployment of instances in OpenShift.",
+          "Design and implement the repository data model, including Elasticsearch mappings.",
+          "Carry out user feedback sessions and help identify UX/UI improvements."
+        ],
+        "technologies": "Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio, PostgreSQL, Redis",
+        "country": "Geneve, Switzerland",
+        "logo": "logo-cern.jpg"
+      },
+      {
+        "company": "CERN",
+        "title": "Software Engineer",
+        "years": "Feb 2018 - Jun 2019",
+        "description": "Lead developer of the new generation of <a href=\"https://cern-search.docs.cern.ch\">CERN Search as a Service",
+        "roles": [
+          "<b>Develop from scratch the production version of the system in under two years time</b>. The system indexes and searches over 24.000.000 documents.",
+          "Deploy and maintain the pilot instance for the CERN’s Engineering Data Management Service.",
+          "Support the CERN’s and FermiLab’s Indico team on their integration with the CERN Search Service.",
+          "Contribute to modules of the Invenio Software organisation.",
+          "Develop and <b>deploy in production</b> a crawler to harvest the content from the whole CERN websphere.",
+          "Optimize Elasticsearch mappings and search scoring functions.",
+          "Develop the new CERN Search website."
+        ],
+        "technologies": "Python, React, Elasticsearch, OpenShift, RabbitMQ, Invenio, PostgreSQL, Redis",
+        "country": "Geneve, Switzerland",
+        "logo": "logo-cern.jpg"
+      },
+      {
+        "company": "CERN",
+        "title": "Big Data Engineer",
+        "years": "Feb 2017 - Feb 2018",
+        "description": "Core developer of the Compute Security Team’s infrastructure",
+        "roles": [
+          "Core developer of a <b>large scale intrusion detection system</b> capable of ingesting 500GB of data per day, and enriching and analyzing in real time data pipelines with 50.000 events per second.",
+          "Develop new features for the Malware Information Sharing Platform (MISP) instances of CERN and WLCG. <b>Maintain both production instances</b>.",
+          "Scripting and forensic analysis tasks for computer security incidents."
+        ],
+        "technologies": "Python, Scala, PHP, Spark, Kafka, Flume, YARN, Mesos, Puppet, Docker",
+        "country": "Geneve, Switzerland",
+        "logo": "logo-cern.jpg"
+      },
+      {
+        "company": "NewProLab",
+        "title": "Big Data Instructor",
+        "years": "Nov 2016 - Nov 2017",
+        "description": "Design and instruct both in-person and online Big Data courses.",
+        "technologies": "Hadoop, Spark, Kafka, Flume, Hive, Pig, Impala, Sqoop, Cloudera, Hortonworks, YARN",
+        "country": "Luxemburg, Luxemburg",
+        "logo": "logo-npl.jpg"
+      },
+      {
+        "company": "Citizen Cyberlab",
+        "title": "Full Stack Developer",
+        "years": "Oct 2016 - Feb 2017",
+        "description": "Develop and integrate the ”SDG Hunter” mobile application as part of the Sustainable Development Goals initiative.",
+        "technologies": "Android, AWS, DynamoDB, S3",
+        "country": "Geneve, Switzerland (Remote)",
+        "logo": "logo-ccc.jpg"
+      },
+      {
+        "company": "CERN",
+        "title": "Computer Security Engineer Intern",
+        "years": "Jun 2016 - Oct 2016",
+        "description": "Develop the Single Sign-On, BroIDS export and Puppet modules for the MISP platform. Deploy all modules in CERN’s production instance. The two first modules were added to the open source code base of the MISP project, and the last one is part of the Vox Pupuli Puppet organisation.",
+        "technologies": "PHP, Puppet, SSO, Shibboleth, BroIDS",
+        "country": "Geneve, Switzerland",
+        "logo": "logo-cern.jpg"
+      },
+      {
+        "company": "Universidad Complutense de Madrid",
+        "title": "Research Fellow",
+        "years": "Oct 2015 - Jun 2016",
+        "description": "Lead developer of a disease outbreak inference system. Deploy the beta version of the system and carry out the first testing phase with real users.",
+        "technologies": "Java, Python, JavaScript, Spark, Flask, Spring REST, MongoDB, MySQL, Hibernate",
+        "country": "Madrid, Spain",
+        "logo": "logo-fdi.jpg"
+      },
+      {
+        "company": "Pragsis Bidoop",
+        "title": "Big Data Developer Intern",
+        "years": "Oct 2015 - Feb 2016",
+        "description": "Develop and deploy data processing pipelines for a user profiling platform.",
+        "technologies": "Java, Spark, Oozie, Hortonworks, YARN",
+        "country": "Madrid, Spain",
+        "logo": "logo-pragsis.jpg"
+      },
+      {
+        "company": "Fon",
+        "title": "Quality Assurance Intern",
+        "years": "Jun 2015 - October 2015",
+        "description": "Test mobile and web applications, and troubleshoot problems in production environments.",
+        "technologies": "Java, Soap UI, Selenium, Appium, TestNG, MySQL, Troubleshooting",
+        "country": "Madrid, Spain",
+        "logo": "logo-fon.jpg"
+      }
+    ],
+    "skills":[
+      {
+        "name":"Python",
+        "level":"90%"
+      },
+      {
+        "name":"React",
+        "level":"50%"
+      },
+      {
+        "name":"OpenShift",
+        "level":"80%"
+      },
+      {
+        "name":"Helm",
+        "level":"50%"
+      },
+      {
+        "name":"Elasticsearch",
+        "level":"80%"
+      },
+      {
+        "name":"Large Scale System design",
+        "level":"70%"
+      },
+      {
+        "name":"Go",
+        "level":"40%"
+      }
+    ],
+    "publications":[
+      {
+        "key": "zenodo-spam-detection",
+        "reference": "<a href=\"https://doi.org/10.5281/zenodo.4283435\">Panero, P. (2021) <i>Spam detection on digital repositories using deep neural networks: Zenodo's use case</i>.</a>"
+      },
+      {
+        "key": "citadel-search",
+        "reference": "<a href=\"https://doi.org/10.5281/zenodo.3581157\">Panero, P., Posada Torbo, I., Oliveira Antunes, C. R., & Wagner, A. (2019) <i>Citadel Search: Open Source Enterprise Search</i>. Open Search Symposium.</a>"
+      },
+      {
+        "key": "security-ids",
+        "reference": "<a href=\"https://doi.org/10.22323/1.327.0014\">Panero, P., Valsan, L., Brillault, V., & Schuszter, I. C. (2018) <i>Building a large scale Intrusion Detection System using Big Data technologies</i>. PoS, 014.</a>"
+      },
+      {
+        "key": "clustering",
+        "reference": "<a href=\"https://dblp.org/rec/conf/sepln/PaneroMCAA17\">Panero, P., Moreno, M., Crespo, T., de Albornoz, J. C., & Amigó, E. (2017) <i>UNED PanMorCrepsTeam at M-WePNaD</i>. In IberEval@ SEPLN (pp. 152-156).</a>"
+      }
+    ],
+    "education":[
+      {
+        "school":"Universidad Oberta de Catalunya",
+        "degree":"MSc. in Data Science",
+        "graduated":"2018-2021",
+        "description":"Master Thesis on: Spam detection on digital repositories using deep neural networks."
+      },
+      {
+        "school":"Oulun Yliopisto",
+        "degree":"Erasmus+ Exchange (Oulu, Finland)",
+        "graduated":"2014-2015",
+        "description":""
+      },
+      {
+        "school":"Universidad Complutense de Madrid",
+        "degree":"BSc. in Computer Science Engineering",
+        "graduated":"2011-2016",
+        "description":"Honors and awards received for the final project. Graduated with extra credits."
+      }
+    ]
   }
 }

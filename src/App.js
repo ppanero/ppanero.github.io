@@ -38,7 +38,7 @@ class App extends Component {
         <Header/>
         <Home data={this.state.information.personal}/>
         <About data={this.state.information.personal}/>
-        <Resume/>
+        <Resume data={this.state.information.resume}/>
         <Footer/>
       </div>
     );

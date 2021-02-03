@@ -2,7 +2,13 @@
 
 .resume {
   background: $background-color-light;
-  color: $text-color-dark;
   font: $font-size-medium $text-font;
-  padding: 40px 0px;
+}
+
+.resume-header {
+  text-align: center;
+}
+
+.resume-header span {
+  border-bottom: 3px solid $text-color-dark;
 }

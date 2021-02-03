@@ -4,5 +4,10 @@
 @import "./footer.scss";
 @import "./header.scss";
 @import "./home.scss";
+@import "./resume.scss";
 @import "./social.scss";
 @import "./variables.scss";
+
+.container-fluid {
+  padding: 40px 0px;
+}
