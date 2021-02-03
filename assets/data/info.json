@@ -16,7 +16,7 @@
         "company": "CERN",
         "title": "Software Engineer",
         "years": "Jun 2019 - Jan 2021",
-        "description": "<b>Core developer of the Invenio Research Data Management platform (<a href=\"https://inveniosoftware.org/products/rdm/\">InvenioRDM</a>) and core maintainer of <a href=\"https://inveniosoftware.org/products/framework/\"> Invenio Framework</a> modules",
+        "description": "Core developer of the Invenio Research Data Management platform (<a href=\"https://inveniosoftware.org/products/rdm/\">InvenioRDM</a>) and core maintainer of <a href=\"https://inveniosoftware.org/products/framework/\"> Invenio Framework</a> modules",
         "roles": [
           "Core developer of a project with more than 18 partners. Assist in the organisation of meetings and workshops of more than 30 people.",
           "Contribute and maintain modules of the Invenio Software organisation, consisting of more than 130 modules.",
@@ -169,19 +169,22 @@
         "school":"Universidad Oberta de Catalunya",
         "degree":"MSc. in Data Science",
         "graduated":"2018-2021",
-        "description":"Master Thesis on: Spam detection on digital repositories using deep neural networks."
+        "description":"Master Thesis on: Spam detection on digital repositories using deep neural networks.",
+        "icon": "uoc.png"
       },
       {
         "school":"Oulun Yliopisto",
         "degree":"Erasmus+ Exchange (Oulu, Finland)",
         "graduated":"2014-2015",
-        "description":""
+        "description":"Courses on distributed computing, ubiquitous computing and user centered research.",
+        "icon": "oulun_yliopisto.png"
       },
       {
         "school":"Universidad Complutense de Madrid",
         "degree":"BSc. in Computer Science Engineering",
         "graduated":"2011-2016",
-        "description":"Honors and awards received for the final project. Graduated with extra credits."
+        "description":"Honors and awards received for the final project. Graduated with extra credits.",
+        "icon": "ucm.png"
       }
     ]
   }

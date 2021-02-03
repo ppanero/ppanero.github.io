@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+/* General */
 .resume {
   background: $background-color-light;
   font: $font-size-medium $text-font;
@@ -12,3 +13,23 @@
 .resume-header span {
   border-bottom: 3px solid $text-color-dark;
 }
+
+/* Education */
+
+.education-item-image {
+  text-align: center;
+}
+
+.education img {
+  max-width: 75px;
+}
+
+/* Publications */
+.publication a { 
+  color: $text-color-dark-secondary;
+}
+
+.publication a:hover {
+  color: $text-color-dark
+}
+
