@@ -18,12 +18,12 @@
         "years": "Jun 2019 - Jan 2021",
         "description": "Core developer of the Invenio Research Data Management platform (<a href=\"https://inveniosoftware.org/products/rdm/\">InvenioRDM</a>) and core maintainer of <a href=\"https://inveniosoftware.org/products/framework/\"> Invenio Framework</a> modules",
         "roles": [
-          "Core developer of a project with more than 18 partners. Assist in the organisation of meetings and workshops of more than 30 people.",
+          "<b>Core developer of a project with more than 18 partners</b>. Assist in the organisation of meetings and workshops of more than 30 people.",
           "Contribute and maintain modules of the Invenio Software organisation, consisting of more than 130 modules.",
-          "Redesign and implement core packages to build the RESTful APIs.",
-          "Develop Helm charts and automate the deployment of instances in OpenShift.",
-          "Design and implement the repository data model, including Elasticsearch mappings.",
-          "Carry out user feedback sessions and help identify UX/UI improvements."
+          "<b>Redesign and implement core packages</b> to build the RESTful APIs.",
+          "Develop <b>Helm charts and automate the deployment</b> of instances in OpenShift.",
+          "<b>Design and implement the repository data model</b>, including Elasticsearch mappings.",
+          "Carry out user feedback sessions and help <b>identify UX/UI improvements</b>."
         ],
         "technologies": "Python, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio, PostgreSQL, Redis",
         "country": "Geneve, Switzerland",
@@ -60,7 +60,9 @@
         "technologies": "Python, Scala, PHP, Spark, Kafka, Flume, YARN, Mesos, Puppet, Docker",
         "country": "Geneve, Switzerland",
         "icon": "cern.png"
-      },
+      }
+    ],
+    "work_more":[
       {
         "company": "NewProLab",
         "title": "Big Data Instructor",

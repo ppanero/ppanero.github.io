@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import { Col, Container, Image, Row } from 'react-bootstrap'; 
+import { Col, Container, Image, Row } from 'react-bootstrap';
 
 var images = require.context('../../assets/images', true);
 
@@ -23,7 +23,6 @@ class Resume extends Component {
                   return <li key={index} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
                 })}
               </ul>
-              
             </Col>
           </Row>
         )
@@ -53,7 +52,7 @@ class Resume extends Component {
       });
     }
 
-    return (        
+    return (
       <Container fluid id="resume" className="resume">
         <Row className="justify-content-md-center">
           <Col md={8}>
