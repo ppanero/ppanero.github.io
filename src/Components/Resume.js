@@ -10,6 +10,10 @@ import Row from 'react-bootstrap/Row';
 const images = require.context('../../assets/images', true);
 
 const Resume = ({ work, education, publications }) => {
+  const testfunc = () => {
+    console.error('TEST YEAH!');
+  };
+
   const workList = work.map((workExp) => {
     let roles = null;
     if (workExp.roles.length > 0) {
@@ -23,7 +27,7 @@ const Resume = ({ work, education, publications }) => {
               ))}
             </ul>
             <div className="text-center">
-              <Button className="btn-show-more" size="sm">Show more</Button>
+              <Button className="btn-show-more" type="submit" size="sm" onClick={() => testfunc}>Show more</Button>
             </div>
           </Container>
         </Row>
