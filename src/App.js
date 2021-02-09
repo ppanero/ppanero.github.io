@@ -4,42 +4,43 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Resume from './Components/Resume';
+import 'bootstrap';
 
 import data from '../assets/data/info.json';
 
 class App extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this._isMounted = false;
-    this.state = {
-      information: {}
-    };
-  }
-
-  getInfo(){
-    if (this._isMounted) {
-      this.setState({ information: data })
-    }
-  }
-
-  componentDidMount(){
-    this._isMounted = true;
-    this.getInfo();
-  }
-
-  componentWillUnmount(){
-    this._isMounted = false;
+    this.information = data;
   }
 
   render() {
+    const {
+      bio,
+      address,
+      description,
+      email,
+      name,
+      occupation,
+    // eslint-disable-next-line react/destructuring-assignment
+    } = this.information.personal;
+
+    // eslint-disable-next-line react/destructuring-assignment
+    const { work, education, publications } = this.information.resume;
+
     return (
       <div className="App">
-        <Header/>
-        <Home data={this.state.information.personal}/>
-        <About data={this.state.information.personal}/>
-        <Resume data={this.state.information.resume}/>
-        <Footer/>
+        <Header />
+        <Home
+          city={address.city}
+          country={address.country}
+          description={description}
+          name={name}
+          occupation={occupation}
+        />
+        <About bio={bio} email={email} />
+        <Resume work={work} education={education} publications={publications} />
+        <Footer />
       </div>
     );
   }

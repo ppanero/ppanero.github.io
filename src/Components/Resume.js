@@ -1,92 +1,109 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
 
-var images = require.context('../../assets/images', true);
+const images = require.context('../../assets/images', true);
 
-class Resume extends Component {
-  
-  render() {
-    if(this.props.data){
-      var workExperience = this.props.data.work.map(function(work){
-        return (
-          <Row key={work.years}>
-            <Col md={2} className="work-item-image">
-              <Image src={images(`./work/${work.icon}`).default} rounded />
-            </Col>
-            <Col md={10}>
-              <h3>{work.title}</h3>
-              <p>{work.company}<span>&bull;</span> <em>{work.years}</em></p>
-              <p>{ ReactHtmlParser(work.description) }</p>
-              <ul className="work-item-roles"> { /*Better styling than ListGroup for the needs of this section */ }
-                { work.roles.map(function(role, index){
-                  return <li key={index} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
-                })}
-              </ul>
-            </Col>
-          </Row>
-        )
-      });
-
-      var education = this.props.data.education.map(function(education) {
-        return (
-          <Row key={education.school}>
-            <Col md={2} className="education-item-image">
-              <Image src={images(`./education/${education.icon}`).default} rounded />
-            </Col>
-            <Col md={10}>
-              <h3>{education.school}</h3>
-              <p>{education.degree} <span>&bull;</span> <em>{education.graduated}</em></p>
-              <p>{education.description}</p>
-            </Col>
-          </Row>
-        )
-      });
-
-      var publications = this.props.data.publications.map(function(publications){
-        return (
-          <Row  className="publication" key={publications.key}>
-            <p>{ ReactHtmlParser(publications.reference) }</p>
-          </Row >
-        )
-      });
+const Resume = ({ work, education, publications }) => {
+  const workList = work.map((workExp) => {
+    let roles = null;
+    if (workExp.roles.length > 0) {
+      roles = (
+        <Row>
+          <Container>
+            <ul className="work-item-roles d-none"> { /* Better styling than ListGroup for the needs of this section */ }
+              { workExp.roles.map((role, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={index} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
+              ))}
+            </ul>
+            <div className="text-center">
+              <Button className="btn-show-more" size="sm">Show more</Button>
+            </div>
+          </Container>
+        </Row>
+      );
     }
 
     return (
-      <Container fluid id="resume" className="resume">
-        <Row className="justify-content-md-center">
-          <Col md={8}>
-            <Row>
-              <Col md={3} className="resume-header">
-                  <h1><span>Work</span></h1>
-              </Col>
-              <Col md={9} className="work">
-                { workExperience }
-              </Col>
-            </Row>
-            <hr></hr>
-            <Row>
-              <Col md={3} className="resume-header">
-                  <h1><span>Education</span></h1>
-              </Col>
-              <Col md={9} className="education">
-                { education }
-              </Col>
-            </Row>
-            <hr></hr>
-            <Row>
-              <Col md={3} className="resume-header">
-                  <h1><span>Publications</span></h1>
-              </Col>
-              <Col md={9}>
-                { publications }
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
+      <Row key={workExp.years}>
+        <Col md={2} className="work-item-image">
+          <Image src={images(`./work/${workExp.icon}`).default} rounded />
+        </Col>
+        <Col md={10}>
+          <h3>{workExp.title}</h3>
+          <p>{workExp.company}<span>&bull;</span> <em>{workExp.years}</em></p>
+          <p>{ ReactHtmlParser(workExp.description) }</p>
+          <div>{ roles }</div>
+        </Col>
+      </Row>
     );
-  }
-}
+  });
+
+  const educationList = education.map((degree) => (
+    <Row key={degree.school}>
+      <Col md={2} className="education-item-image">
+        <Image src={images(`./education/${degree.icon}`).default} rounded />
+      </Col>
+      <Col md={10}>
+        <h3>{ degree.school }</h3>
+        <p>{degree.degree} <span>&bull;</span> <em>{degree.graduated}</em></p>
+        <p>{degree.description}</p>
+      </Col>
+    </Row>
+  ));
+
+  const publicationsList = publications.map((publication) => (
+    <Row className="publication" key={publication.key}>
+      <p>{ ReactHtmlParser(publication.reference) }</p>
+    </Row>
+  ));
+
+  return (
+    <Container fluid id="resume" className="resume">
+      <Row className="justify-content-md-center">
+        <Col md={8}>
+          <Row>
+            <Col md={3} className="resume-header">
+              <h1><span>Work</span></h1>
+            </Col>
+            <Col md={9} className="work">
+              { workList }
+            </Col>
+          </Row>
+          <hr />
+          <Row>
+            <Col md={3} className="resume-header">
+              <h1><span>Education</span></h1>
+            </Col>
+            <Col md={9} className="education">
+              { educationList }
+            </Col>
+          </Row>
+          <hr />
+          <Row>
+            <Col md={3} className="resume-header">
+              <h1><span>Publications</span></h1>
+            </Col>
+            <Col md={9}>
+              { publicationsList }
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+Resume.propTypes = {
+  work: PropTypes.arrayOf(PropTypes.object).isRequired,
+  education: PropTypes.arrayOf(PropTypes.object).isRequired,
+  publications: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default Resume;
