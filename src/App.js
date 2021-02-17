@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react';
 import About from './Components/About';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Resume from './Components/Resume';
-import 'bootstrap';
 
 import data from '../assets/data/info.json';
 
@@ -12,6 +12,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.information = data;
+    this.handleOnClick = (e) => {
+      e.preventDefault();
+      // eslint-disable-next-line no-undef
+      alert('WEEE');
+    };
   }
 
   render() {
@@ -30,6 +35,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Button size="small" onClick={this.handleOnClick}>Show more</Button>
         <Header />
         <Home
           city={address.city}

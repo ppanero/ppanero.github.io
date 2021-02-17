@@ -8,7 +8,7 @@ This project is based on [react-resume-template](https://github.com/tbakerx/reac
 
 ESLint is used for webpack and react to conform to the standards.
 
-Styling is done using React-Bootstrap. Why? Because I've used other libraries such as React-Semantic-UI in other projects and it seems nice to learn a new one. In addition [npm trends](https://www.npmtrends.com/material-ui-vs-react-bootstrap-vs-react-semantic-ui-vs-semantic-ui-vs-semantic-ui-react-vs-styled-components) sets React-Bootstrap as a raising choice at the moment. Finally, its size is the smallest after styled components.
+Styling is done using React-Semantic-UI.
 
 ## Previous versions
 

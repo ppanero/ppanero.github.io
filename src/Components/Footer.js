@@ -2,40 +2,35 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Row from 'react-bootstrap/Row';
+import { Grid, List } from 'semantic-ui-react';
 
 const Footer = () => (
-  <Container fluid className="footer">
-    <Row>
-      <Col lg>
-        <ListGroup horizontal className="social justify-content-md-center">
-          <ListGroup.Item key="mail">
+  <Grid centered className="footer">
+    <Grid.Row>
+      <Grid.Column width={4}>
+        <List horizontal className="social">
+          <List.Item key="mail">
             <a href="mailto:pablopanerovz@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-          </ListGroup.Item>
-          <ListGroup.Item key="linkedin">
+          </List.Item>
+          <List.Item key="linkedin">
             <a href="https://www.linkedin.com/in/ppanero/">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-          </ListGroup.Item>
-          <ListGroup.Item key="github">
+          </List.Item>
+          <List.Item key="github">
             <a href="http://github.com/ppanero">
               <FontAwesomeIcon icon={faGithubSquare} />
             </a>
-          </ListGroup.Item>
-        </ListGroup>
-      </Col>
-    </Row>
-    <Row>
-      <Col lg>
-        <p className="copyright">&copy; Copyright 2021 Pablo Panero</p>
-      </Col>
-    </Row>
-  </Container>
+          </List.Item>
+        </List>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row>
+      <p className="copyright">&copy; Copyright 2021 Pablo Panero</p>
+    </Grid.Row>
+  </Grid>
 );
 
 export default Footer;

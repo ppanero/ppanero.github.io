@@ -1,18 +1,40 @@
-import React from 'react';
-import Nav from 'react-bootstrap/Nav';
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
 
-const Header = () => (
-  <Nav className="header justify-content-center">
-    <Nav.Item>
-      <Nav.Link href="#home">Home</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#about">About</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#resume">Resume</Nav.Link>
-    </Nav.Item>
-  </Nav>
-);
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeItem: 'home' };
+    this.handleItemClick = (e, { name }) => {
+      this.setState({ activeItem: name });
+    };
+  }
+
+  render() {
+    const { activeItem } = this.state;
+
+    return (
+      <div>
+        <Menu pointing secondary>
+          <Menu.Item
+            name="Home"
+            active={activeItem === 'Home'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="About"
+            active={activeItem === 'About'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="Resume"
+            active={activeItem === 'Resume'}
+            onClick={this.handleItemClick}
+          />
+        </Menu>
+      </div>
+    );
+  }
+}
 
 export default Header;

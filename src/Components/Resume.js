@@ -1,108 +1,125 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+import { Accordion, Button, Grid, Image } from 'semantic-ui-react';
 
 const images = require.context('../../assets/images', true);
 
-const Resume = ({ work, education, publications }) => {
-  const testfunc = () => {
-    console.error('TEST YEAH!');
-  };
+class Resume extends Component {
+  constructor(props) {
+    super(props);
+    this.work = props.work;
+    this.education = props.education;
+    this.publications = props.publications;
+    this.state = { activeIndex: 0 };
+    this.handleItemClick = (e, titleProps) => {
+      const { index } = titleProps;
+      const { activeIndex } = this.state;
+      const newIndex = activeIndex === index ? -1 : index;
+      this.setState({ activeIndex: newIndex });
+      console.error('EEEEEH');
+    };
+  }
 
-  const workList = work.map((workExp) => {
-    let roles = null;
-    if (workExp.roles.length > 0) {
-      roles = (
-        <Row>
-          <Container>
-            <ul className="work-item-roles d-none"> { /* Better styling than ListGroup for the needs of this section */ }
-              { workExp.roles.map((role, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <li key={index} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
-              ))}
-            </ul>
-            <div className="text-center">
-              <Button className="btn-show-more" type="submit" size="sm" onClick={() => testfunc}>Show more</Button>
-            </div>
-          </Container>
-        </Row>
+  render() {
+    const { activeIndex } = this.state;
+
+    const workList = this.work.map((workExp, outterIdx) => {
+      let roles = null;
+      if (workExp.roles.length > 0) {
+        roles = (
+          <Grid.Row>
+            <Accordion>
+              <Accordion.Title
+                active={activeIndex === outterIdx}
+                index={outterIdx}
+                onClick={this.handleClick}
+              >
+                <Button size="small" onClick={() => { console.error('WEEE'); }}>Show more</Button>
+              </Accordion.Title>
+              <Accordion.Content active={activeIndex === 0}>
+                <ul className="work-item-roles"> { /* Better styling than ListGroup for the needs of this section */ }
+                  { workExp.roles.map((role, innerIdx) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <li key={innerIdx} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
+                  ))}
+                </ul>
+              </Accordion.Content>
+            </Accordion>
+          </Grid.Row>
+        );
+      }
+
+      return (
+        <Grid.Row key={workExp.years}>
+          <Grid.Column width={6} className="work-item-image">
+            <Image src={images(`./work/${workExp.icon}`).default} size="tiny" circular />
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <h3>{workExp.title}</h3>
+            <p>{workExp.company}<span>&bull;</span> <em>{workExp.years}</em></p>
+            <p>{ ReactHtmlParser(workExp.description) }</p>
+            <div>{ roles }</div>
+          </Grid.Column>
+        </Grid.Row>
       );
-    }
+    });
+
+    const educationList = this.education.map((degree) => (
+      <Grid.Row key={degree.school}>
+        <Grid.Column md={2} className="education-item-image">
+          <Image src={images(`./education/${degree.icon}`).default} rounded />
+        </Grid.Column>
+        <Grid.Column md={10}>
+          <h3>{ degree.school }</h3>
+          <p>{degree.degree} <span>&bull;</span> <em>{degree.graduated}</em></p>
+          <p>{degree.description}</p>
+        </Grid.Column>
+      </Grid.Row>
+    ));
+
+    const publicationsList = this.publications.map((publication) => (
+      <Grid.Row className="publication" key={publication.key}>
+        <p>{ ReactHtmlParser(publication.reference) }</p>
+      </Grid.Row>
+    ));
 
     return (
-      <Row key={workExp.years}>
-        <Col md={2} className="work-item-image">
-          <Image src={images(`./work/${workExp.icon}`).default} rounded />
-        </Col>
-        <Col md={10}>
-          <h3>{workExp.title}</h3>
-          <p>{workExp.company}<span>&bull;</span> <em>{workExp.years}</em></p>
-          <p>{ ReactHtmlParser(workExp.description) }</p>
-          <div>{ roles }</div>
-        </Col>
-      </Row>
+      <Grid id="resume" className="resume">
+        <Grid.Row className="justify-content-md-center">
+          <Grid.Column md={8}>
+            <Grid.Row>
+              <Grid.Column md={3} className="resume-header">
+                <h1><span>Work</span></h1>
+              </Grid.Column>
+              <Grid.Column md={9} className="work">
+                { workList }
+              </Grid.Column>
+            </Grid.Row>
+            <hr />
+            <Grid.Row>
+              <Grid.Column md={3} className="resume-header">
+                <h1><span>Education</span></h1>
+              </Grid.Column>
+              <Grid.Column md={9} className="education">
+                { educationList }
+              </Grid.Column>
+            </Grid.Row>
+            <hr />
+            <Grid.Row>
+              <Grid.Column md={3} className="resume-header">
+                <h1><span>Publications</span></h1>
+              </Grid.Column>
+              <Grid.Column md={9}>
+                { publicationsList }
+              </Grid.Column>
+            </Grid.Row>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
-  });
-
-  const educationList = education.map((degree) => (
-    <Row key={degree.school}>
-      <Col md={2} className="education-item-image">
-        <Image src={images(`./education/${degree.icon}`).default} rounded />
-      </Col>
-      <Col md={10}>
-        <h3>{ degree.school }</h3>
-        <p>{degree.degree} <span>&bull;</span> <em>{degree.graduated}</em></p>
-        <p>{degree.description}</p>
-      </Col>
-    </Row>
-  ));
-
-  const publicationsList = publications.map((publication) => (
-    <Row className="publication" key={publication.key}>
-      <p>{ ReactHtmlParser(publication.reference) }</p>
-    </Row>
-  ));
-
-  return (
-    <Container fluid id="resume" className="resume">
-      <Row className="justify-content-md-center">
-        <Col md={8}>
-          <Row>
-            <Col md={3} className="resume-header">
-              <h1><span>Work</span></h1>
-            </Col>
-            <Col md={9} className="work">
-              { workList }
-            </Col>
-          </Row>
-          <hr />
-          <Row>
-            <Col md={3} className="resume-header">
-              <h1><span>Education</span></h1>
-            </Col>
-            <Col md={9} className="education">
-              { educationList }
-            </Col>
-          </Row>
-          <hr />
-          <Row>
-            <Col md={3} className="resume-header">
-              <h1><span>Publications</span></h1>
-            </Col>
-            <Col md={9}>
-              { publicationsList }
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+  }
+}
 
 Resume.propTypes = {
   work: PropTypes.arrayOf(PropTypes.object).isRequired,

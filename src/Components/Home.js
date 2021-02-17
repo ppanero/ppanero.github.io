@@ -4,40 +4,37 @@ import ReactHtmlParser from 'react-html-parser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Row from 'react-bootstrap/Row';
+import { Grid, List } from 'semantic-ui-react';
 
 const Home = ({ name, occupation, description, city, country }) => (
-  <Container className="home" fluid>
-    <Row className="justify-content-md-center">
-      <Col md={8}>
+  <Grid centered className="home">
+    <Grid.Row>
+      <Grid.Column>
         <div className="banner-text">
           <h1>I&apos;m {name}</h1>
           <h3>... a {occupation} based in {city}, {country}. {ReactHtmlParser(description)}</h3>
           <hr />
-          <ListGroup horizontal className="social justify-content-md-center">
-            <ListGroup.Item key="mail">
+          <List horizontal className="social">
+            <List.Item key="mail">
               <a href="mailto:pablopanerovz@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
-            </ListGroup.Item>
-            <ListGroup.Item key="linkedin">
+            </List.Item>
+            <List.Item key="linkedin">
               <a href="https://www.linkedin.com/in/ppanero/">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-            </ListGroup.Item>
-            <ListGroup.Item key="github">
+            </List.Item>
+            <List.Item key="github">
               <a href="http://github.com/ppanero">
                 <FontAwesomeIcon icon={faGithubSquare} />
               </a>
-            </ListGroup.Item>
-          </ListGroup>
+            </List.Item>
+          </List>
         </div>
-      </Col>
-    </Row>
-  </Container>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
 );
 
 Home.propTypes = {

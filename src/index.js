@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import 'bootstrap';
 
-import '../assets/scss/theme.scss';
+import 'semantic-ui-css/semantic.min.css';
+import '../assets/less/theme.less';
 
 ReactDOM.render(
   <App />,

@@ -1,9 +1,9 @@
-@import "./variables.scss";
+@import "./variables.less";
 
 /* General */
 .resume {
-  background: $background-color-light;
-  font: $font-size-medium $text-font;
+  background: @background-color-light;
+  font: @font-size-medium @text-font;
 }
 
 .resume-header {
@@ -11,7 +11,7 @@
 }
 
 .resume-header span {
-  border-bottom: 3px solid $text-color-dark;
+  border-bottom: 3px solid @text-color-dark;
 }
 
 /* Images */
@@ -35,16 +35,16 @@
 }
 
 .btn-show-more {
-  background-color: $background-color-dark !important;
-  border-color: $background-color-dark !important;
+  background-color: @background-color-dark !important;
+  border-color: @background-color-dark !important;
 }
 
 /* Publications */
 .publication a { 
-  color: $text-color-dark-secondary;
+  color: @text-color-dark-secondary;
 }
 
 .publication a:hover {
-  color: $text-color-dark
+  color: @text-color-dark
 }
 

@@ -5,41 +5,38 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   module: {
     rules: [
-      {
+      { // node_modules - only babel, no eslint
         test: /\.(js|jsx)$/,
+        include: [path.resolve(__dirname, 'node_modules')],
+        use: ['babel-loader'],
+      },
+      { // project files - babel + eslint
+        test: /\.(js|jsx)$/,
+        exclude: [path.resolve(__dirname, 'node_modules')],
         use: ['babel-loader', 'eslint-loader'],
       },
       {
-        test: /\.(scss|css)$/,
-        use: [{
-          loader: 'style-loader', // inject CSS to page
-        }, {
-          loader: 'css-loader', // translates CSS into CommonJS modules
-        }, {
-          loader: 'postcss-loader', // Run post css actions
-          options: {
-            postcssOptions: {
-              plugins: [
-                'precss',
-                'autoprefixer',
-              ],
-            },
-          },
-        }, {
-          loader: 'sass-loader', // compiles Sass to CSS
-        }],
+        test: /\.(less|css)$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
       {
-        test: /\.(jpg|png)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'url-loader',
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: require.resolve('url-loader'),
+        options: {
+          limit: 10000,
         },
+      },
+      {
+        test: [/\.eot$/, /\.ttf$/, /\.svg$/, /\.woff$/, /\.woff2$/],
+        loader: require.resolve('file-loader'),
       },
     ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    fallback: {
+      buffer: false,
+    },
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -49,6 +46,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
+      inject: true,
     }),
   ],
 };
