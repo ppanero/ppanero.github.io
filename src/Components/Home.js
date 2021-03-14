@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -31,6 +31,11 @@ const Home = ({ name, occupation, description, city, country }) => (
             <ListGroup.Item key="github">
               <a href="http://github.com/ppanero">
                 <FontAwesomeIcon icon={faGithubSquare} />
+              </a>
+            </ListGroup.Item>
+            <ListGroup.Item key="stackoverflow">
+              <a href="https://stackoverflow.com/users/7031728/ppanero">
+                <FontAwesomeIcon icon={faStackOverflow} />
               </a>
             </ListGroup.Item>
           </ListGroup>
