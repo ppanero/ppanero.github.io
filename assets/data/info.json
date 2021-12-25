@@ -156,8 +156,16 @@
     ],
     "publications":[
       {
+        "key": "zenodo-spam-detection-poster",
+        "reference": "<a href=\"https://doi.org/10.5281/zenodo.4773365\">Panero, P., Ioannidis, A., Gonzalez Lopez, J.B. (2021) <i>Zenodo - Spam detection using neural networks</i>.</a>"
+      },
+      {
         "key": "zenodo-spam-detection",
         "reference": "<a href=\"https://doi.org/10.5281/zenodo.4283435\">Panero, P. (2021) <i>Spam detection on digital repositories using deep neural networks: Zenodo's use case</i>.</a>"
+      },
+      {
+        "key": "citadel-search-indico",
+        "reference": "<a href=\"https://doi.org/10.1051/epjconf/202024508028\">Constanta, P., Rind, O., Caballero Bejar, J., Ferreira, P., Mönnich, A., Panero, P., De Oliveira Antunes, C.R., Chionis Koufakos, A. (2020) <i>Development of a Versatile, Full-featured Search Functionality for Indico</i>.</a>"
       },
       {
         "key": "citadel-search",
