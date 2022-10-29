@@ -3,7 +3,7 @@
     "name":"Pablo Panero",
     "occupation":"Software Engineer",
     "description":"Currently working at <a href=\"https://zenodo.org\">Zenodo</a>.",
-    "bio":"I'm pasionate about designing and building in large scale systems, really curious about algorithms on distributed systems, and a long etcetera that could be summarized in \"I like to solve problems\". On my free time I love dancing, playing music and disconnecting in the nature. I also like philosophy and the misteries of the mind such as \"How is it possible for thousands of clusters to arrive to a consensus faster than a group of friends on a trip\".",
+    "bio":"I'm pasionate about distributed and large scale systems, algorithms, and obviously coding. Hobbies are dancing and playing music. If you cannot reach me I probably went for a run or I'm hiking some random mountain.\"How is it possible for thousands of nodes on a cluster to reach consensus faster than a group of friends on a trip?\".",
     "email": "pablopanerovz@gmail.com",
     "address":{
       "city":"Geneva",
@@ -12,6 +12,22 @@
   },
   "resume":{
     "work":[
+      {
+        "company": "CERN",
+        "title": "Software Engineer",
+        "years": "Apr 2021 - Now",
+        "description": "Core developer and maintainer of <a href=\"https://zenodo.org/\">Zenodo</a> and <a href=\"https://inveniosoftware.org/products/rdm/\">InvenioRDM</a>.",
+        "roles": [
+          "Operations and Incident response of a platform with <b>more than 23M visits a year (<a href=\"https://zenodo.org/\">Zenodo</a>)</b>",
+          "<b>Data migration</b> planning and execution",
+          "<b>Give presentations and webinars<b/> about Zenodo, its features and latest developments",
+          "Design and implement new features for InvenioRDM",
+          "End user support for Zenodo, and developer support for InvenioRDM"
+        ],
+        "technologies": "Python, React, Elasticsearch, OpenShift, Helm, RabbitMQ, Invenio, PostgreSQL, Redis",
+        "country": "Geneve, Switzerland",
+        "icon": "cern.png"
+      },
       {
         "company": "CERN",
         "title": "Software Engineer",
@@ -46,7 +62,9 @@
         "technologies": "Python, React, Elasticsearch, OpenShift, RabbitMQ, Invenio, PostgreSQL, Redis",
         "country": "Geneve, Switzerland",
         "icon": "cern.png"
-      },
+      }
+    ],
+    "work_more":[
       {
         "company": "CERN",
         "title": "Big Data Engineer",
@@ -60,9 +78,7 @@
         "technologies": "Python, Scala, PHP, Spark, Kafka, Flume, YARN, Mesos, Puppet, Docker",
         "country": "Geneve, Switzerland",
         "icon": "cern.png"
-      }
-    ],
-    "work_more":[
+      },
       {
         "company": "NewProLab",
         "title": "Big Data Instructor",
