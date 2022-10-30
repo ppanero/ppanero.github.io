@@ -154,9 +154,9 @@ class Resume extends Component {
 }
 
 Resume.propTypes = {
-  work: PropTypes.arrayOf(PropTypes.object).isRequired,
-  education: PropTypes.arrayOf(PropTypes.object).isRequired,
-  publications: PropTypes.arrayOf(PropTypes.object).isRequired,
+  work: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  education: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  publications: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default Resume;
