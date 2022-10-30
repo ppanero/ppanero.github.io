@@ -1,5 +1,10 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+
+const esLintOptions = {
+  extensions: ['js', 'jsx'],
+};
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -7,7 +12,15 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ['babel-loader', 'eslint-loader'],
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: 'defaults' }],
+            ],
+          },
+        },
       },
       {
         test: /\.(scss|css)$/,
@@ -20,7 +33,7 @@ module.exports = {
           options: {
             postcssOptions: {
               plugins: [
-                'precss',
+                'postcss-preset-env',
                 'autoprefixer',
               ],
             },
@@ -50,5 +63,6 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    new ESLintPlugin(esLintOptions),
   ],
 };

@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import 'bootstrap';
 
 import '../assets/scss/theme.scss';
 
-ReactDOM.render(
+const rootElement = document.getElementById('app');
+const root = createRoot(rootElement);
+
+root.render(
   <App />,
-  // eslint-disable-next-line no-undef
-  document.getElementById('app'),
 );

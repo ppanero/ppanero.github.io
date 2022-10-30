@@ -7,40 +7,42 @@ import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 
-const Footer = () => (
-  <Container fluid className="footer">
-    <Row>
-      <Col lg>
-        <ListGroup horizontal className="social justify-content-md-center">
-          <ListGroup.Item key="mail">
-            <a href="mailto:pablopanerovz@gmail.com">
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
-          </ListGroup.Item>
-          <ListGroup.Item key="linkedin">
-            <a href="https://www.linkedin.com/in/ppanero/">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </ListGroup.Item>
-          <ListGroup.Item key="github">
-            <a href="http://github.com/ppanero">
-              <FontAwesomeIcon icon={faGithubSquare} />
-            </a>
-          </ListGroup.Item>
-          <ListGroup.Item key="stackoverflow">
-            <a href="https://stackoverflow.com/users/7031728/ppanero">
-              <FontAwesomeIcon icon={faStackOverflow} />
-            </a>
-          </ListGroup.Item>
-        </ListGroup>
-      </Col>
-    </Row>
-    <Row>
-      <Col lg>
-        <p className="copyright">&copy; Copyright 2021 Pablo Panero</p>
-      </Col>
-    </Row>
-  </Container>
-);
+function Footer() {
+  return (
+    <Container fluid className="footer">
+      <Row>
+        <Col lg>
+          <ListGroup horizontal className="social justify-content-md-center">
+            <ListGroup.Item key="mail">
+              <a href="mailto:pablopanerovz@gmail.com">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+            </ListGroup.Item>
+            <ListGroup.Item key="linkedin">
+              <a href="https://www.linkedin.com/in/ppanero/">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </ListGroup.Item>
+            <ListGroup.Item key="github">
+              <a href="http://github.com/ppanero">
+                <FontAwesomeIcon icon={faGithubSquare} />
+              </a>
+            </ListGroup.Item>
+            <ListGroup.Item key="stackoverflow">
+              <a href="https://stackoverflow.com/users/7031728/ppanero">
+                <FontAwesomeIcon icon={faStackOverflow} />
+              </a>
+            </ListGroup.Item>
+          </ListGroup>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg>
+          <p className="copyright">&copy; Copyright 2021 Pablo Panero</p>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
 
 export default Footer;

@@ -1,24 +1,23 @@
-/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 import Accordion from 'react-bootstrap/Accordion';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+import parse from 'html-react-parser';
 
 const images = require.context('../../assets/images', true);
 
-class Resume extends Component {
+export default class Resume extends Component {
   constructor(props) {
     super(props);
-    this.state = { // FIXME: This should be dynamic not hardcoded
-      button0: 'show more',
-      button1: 'show more',
-      button2: 'show more',
-    };
+    // this.state = { // FIXME: This should be dynamic not hardcoded
+    //   button0: 'show more',
+    //   button1: 'show more',
+    //   button2: 'show more',
+    // };
     this.work = props.work;
     this.education = props.education;
     this.publications = props.publications;
@@ -31,30 +30,12 @@ class Resume extends Component {
         roles = (
           <Row>
             <Container>
-              <Accordion>
-                <Accordion.Collapse eventKey={`${workIdx}`}>
-                  <ul className="work-item-roles"> { /* Better styling than ListGroup for the needs of this section */ }
-                    { workExp.roles.map((role, index) => (
-                      // eslint-disable-next-line react/no-array-index-key
-                      <li key={index} className="work-item-roles-item"><p>{ ReactHtmlParser(role) }</p></li>
-                    ))}
-                  </ul>
-                </Accordion.Collapse>
-                <div className="text-center">
-                  <Accordion.Toggle
-                    className="btn-show-more"
-                    as={Button}
-                    variant="primary"
-                    eventKey={`${workIdx}`}
-                    onClick={() => this.updateButtonState(workIdx)}
-                  >
-                    {
-                      // eslint-disable-next-line react/destructuring-assignment
-                      this.state[`button${workIdx}`]
-                    }
-                  </Accordion.Toggle>
-                </div>
-              </Accordion>
+              <ul className="work-item-roles"> { /* Better styling than ListGroup for the needs of this section */ }
+                { workExp.roles.map((role, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <li key={index} className="work-item-roles-item"><p>{ parse(role) }</p></li>
+                ))}
+              </ul>
             </Container>
           </Row>
         );
@@ -62,15 +43,21 @@ class Resume extends Component {
 
       return (
         <Row key={workExp.years}>
-          <Col md={2} className="work-item-image">
-            <Image src={images(`./work/${workExp.icon}`).default} rounded />
-          </Col>
-          <Col md={10}>
-            <h3>{workExp.title}</h3>
-            <p>{workExp.company}<span>&bull;</span> <em>{workExp.years}</em></p>
-            <p>{ ReactHtmlParser(workExp.description) }</p>
-            <div>{ roles }</div>
-          </Col>
+          <Accordion>
+            <Accordion.Item eventKey={`${workIdx}`}>
+              <Accordion.Header>
+                <Col md={2} className="work-item-image">
+                  <Image src={images(`./work/${workExp.icon}`).default} rounded />
+                </Col>
+                <Col md={10}>
+                  <h3>{workExp.title}</h3>
+                  <p>{workExp.company}<span>&bull;</span> <em>{workExp.years}</em></p>
+                  <p>{ parse(workExp.description) }</p>
+                </Col>
+              </Accordion.Header>
+              <Accordion.Body>{ roles }</Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </Row>
       );
     });
@@ -98,22 +85,22 @@ class Resume extends Component {
   getPublicationsList() {
     const publicationsList = this.publications.map((publication) => (
       <Row className="publication" key={publication.key}>
-        <p>{ ReactHtmlParser(publication.reference) }</p>
+        <p>{ parse(publication.reference) }</p>
       </Row>
     ));
 
     return publicationsList;
   }
 
-  updateButtonState(idx) {
-    const btnId = `button${idx}`;
-    // eslint-disable-next-line react/destructuring-assignment
-    const currentState = this.state[`${btnId}`];
+  // updateButtonState(idx) {
+  //   const btnId = `button${idx}`;
+  //   // eslint-disable-next-line react/destructuring-assignment
+  //   const currentState = this.state[`${btnId}`];
 
-    this.setState({
-      [`${btnId}`]: currentState === 'show more' ? 'show less' : 'show more',
-    });
-  }
+  //   this.setState({
+  //     [`${btnId}`]: currentState === 'show more' ? 'show less' : 'show more',
+  //   });
+  // }
 
   render() {
     return (
@@ -158,5 +145,3 @@ Resume.propTypes = {
   education: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   publications: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
-
-export default Resume;

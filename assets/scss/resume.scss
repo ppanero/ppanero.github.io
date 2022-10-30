@@ -3,7 +3,7 @@
 /* General */
 .resume {
   background: $background-color-light;
-  font: $font-size-medium $text-font;
+  font: $text-font;
 }
 
 .resume-header {
@@ -22,21 +22,6 @@
 
 .work img, .education img {
   max-width: 75px;
-}
-
-/* Work Experience */
-
-.work-item-roles p {
-  padding-inline-start: 10px;
-}
-
-.work-item-roles p {
-  margin-bottom: 10px;
-}
-
-.btn-show-more {
-  background-color: $text-color-dark !important;
-  border-color: $text-color-dark !important;
 }
 
 /* Publications */
