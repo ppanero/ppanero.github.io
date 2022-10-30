@@ -10,6 +10,15 @@ ESLint is used for webpack and react to conform to the standards.
 
 Styling is done using React-Bootstrap. Why? Because I've used other libraries such as React-Semantic-UI in other projects and it seems nice to learn a new one. In addition [npm trends](https://www.npmtrends.com/material-ui-vs-react-bootstrap-vs-react-semantic-ui-vs-semantic-ui-vs-semantic-ui-react-vs-styled-components) sets React-Bootstrap as a raising choice at the moment. Finally, its size is the smallest after styled components.
 
+## How to run it
+
+- `npm outdated` to check which dependencies are out of date
+- `npx npm-check-updates -u` to update dependencies in the package.json file
+- `npm install` to install dependencies
+- `npm run-script start` start the site in development mode
+- `npm run-script build` build the site
+
+
 ## Previous versions
 
 - [Jul 2020](https://github.com/ppanero/ppanero.github.io/tree/lektor) - Developed using lektor with webpack for assets building. 
