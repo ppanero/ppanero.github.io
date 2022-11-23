@@ -7,6 +7,57 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
+import ReactWordcloud from 'react-wordcloud';
+
+const options = {
+  colors: ['#CAF0F8', '#90E0EF', '#48CAE4', '#00B4D8', '#0077B6', '#023E8A'],
+  enableTooltip: false,
+  deterministic: false,
+  rotations: 2,
+  rotationAngles: [-90, 0],
+  padding: 1,
+  scale: 'sqrt',
+  spiral: 'archimedean',
+  fontSizes: [16, 80],
+  transitionDuration: 1000,
+};
+
+const words = [
+  // Programming languages
+  { text: 'Python', value: 120 },
+  { text: 'Go', value: 70 },
+  { text: 'JavaScript', value: 30 },
+  // Web technologies and frameworks
+  { text: 'Flask', value: 80 },
+  { text: 'Invenio', value: 60 },
+  { text: 'Celery', value: 60 },
+  { text: 'SQLAlchemy', value: 50 },
+  { text: 'Webpack', value: 30 },
+  { text: 'React', value: 30 },
+  // Databases
+  { text: 'PostgreSQL', value: 80 },
+  { text: 'Elasticsearch', value: 70 },
+  // Data
+  { text: 'Spark', value: 50 },
+  { text: 'Kafka', value: 50 },
+  { text: 'Flume', value: 30 },
+  { text: 'YARN', value: 30 },
+  { text: 'Tensorflow', value: 30 },
+  { text: 'Keras', value: 30 },
+  // DevOps
+  { text: 'Docker', value: 80 },
+  { text: 'OpenShift', value: 70 },
+  { text: 'GitHub Actions', value: 70 },
+  { text: 'Helm', value: 40 },
+  { text: 'OpenStack', value: 30 },
+  { text: 'Puppet', value: 30 },
+  { text: 'Kibana', value: 30 },
+  { text: 'Grafana', value: 30 },
+  // Hobbies
+  { text: 'Dancing', value: 80 },
+  { text: 'Trekking', value: 80 },
+  { text: 'Basketball', value: 50 },
+];
 
 function App() {
   return (
@@ -45,6 +96,9 @@ function App() {
                   </a>
                 </ListGroup.Item>
               </ListGroup>
+            </Row>
+            <Row className="section">
+              <ReactWordcloud words={words} options={options} />
             </Row>
             <Row className="section">
               <Col>
