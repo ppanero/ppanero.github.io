@@ -1,14 +1,46 @@
 @import "~bootstrap/scss/bootstrap";
 
-@import "./about.scss";
-@import "./footer.scss";
-@import "./header.scss";
-@import "./home.scss";
-@import "./resume.scss";
-@import "./social.scss";
 @import "./variables.scss";
+
+html, .App {
+  background: $background-color;
+  background-size: cover;
+}
 
 .container-fluid {
   padding-top: 40px;
   padding-bottom: 40px;
+  text-align: center;
+  color: $text-color;
+  font: $font-size-medium $text-font;
+}
+
+.section {
+  padding: 45px 0px;
+}
+
+.social .list-group-item a,
+.social .list-group-item a:hover {
+  color: $text-color;
+}
+
+.home a,
+.home a:hover {
+  color: $text-color-secondary;
+}
+
+.social {
+  background-color: transparent;
+  font-size: $font-size-icons;
+}
+
+.social .list-group-item {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.quote {
+  font-size: $font-size-tiny;
+  font-style: italic;
 }
