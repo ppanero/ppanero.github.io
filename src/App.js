@@ -1,12 +1,14 @@
 import React, { useCallback } from 'react';
 import 'bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFileLines } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faLinkedin, faOrcid, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Row from 'react-bootstrap/Row';
+import Tooltip from 'react-bootstrap/Tooltip';
 import WordCloud from 'react-d3-cloud';
 
 function App() {
@@ -62,30 +64,65 @@ function App() {
               <h3>Senior Software Engineer @ <a href="https://zenodo.org">Zenodo</a> (CERN)</h3>
               <hr />
               <ListGroup horizontal className="social justify-content-md-center">
+                <ListGroup.Item key="cv">
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>Resume</Tooltip>}
+                  >
+                    <a href="https://github.com/ppanero/ppanero.github.io/blob/development/ppanero_resume.pdf">
+                      <FontAwesomeIcon icon={faFileLines} />
+                    </a>
+                  </OverlayTrigger>
+                </ListGroup.Item>
                 <ListGroup.Item key="mail">
-                  <a href="mailto:pablopanerovz@gmail.com">
-                    <FontAwesomeIcon icon={faEnvelope} />
-                  </a>
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>Mail</Tooltip>}
+                  >
+                    <a href="mailto:pablopanerovz@gmail.com">
+                      <FontAwesomeIcon icon={faEnvelope} />
+                    </a>
+                  </OverlayTrigger>
                 </ListGroup.Item>
                 <ListGroup.Item key="linkedin">
-                  <a href="https://www.linkedin.com/in/ppanero/">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>LinkedIn</Tooltip>}
+                  >
+                    <a href="https://www.linkedin.com/in/ppanero/">
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
+                  </OverlayTrigger>
                 </ListGroup.Item>
                 <ListGroup.Item key="github">
-                  <a href="http://github.com/ppanero">
-                    <FontAwesomeIcon icon={faGithubSquare} />
-                  </a>
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>GitHub</Tooltip>}
+                  >
+                    <a href="http://github.com/ppanero">
+                      <FontAwesomeIcon icon={faGithubSquare} />
+                    </a>
+                  </OverlayTrigger>
                 </ListGroup.Item>
                 <ListGroup.Item key="stackoverflow">
-                  <a href="https://stackoverflow.com/users/7031728/ppanero">
-                    <FontAwesomeIcon icon={faStackOverflow} />
-                  </a>
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>StackOverflow</Tooltip>}
+                  >
+                    <a href="https://stackoverflow.com/users/7031728/ppanero">
+                      <FontAwesomeIcon icon={faStackOverflow} />
+                    </a>
+                  </OverlayTrigger>
                 </ListGroup.Item>
                 <ListGroup.Item key="orcid">
-                  <a href="https://orcid.org/0000-0001-6759-6273">
-                    <FontAwesomeIcon icon={faOrcid} />
-                  </a>
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>ORCID</Tooltip>}
+                  >
+                    <a href="https://orcid.org/0000-0001-6759-6273">
+                      <FontAwesomeIcon icon={faOrcid} />
+                    </a>
+                  </OverlayTrigger>
                 </ListGroup.Item>
               </ListGroup>
             </Row>
