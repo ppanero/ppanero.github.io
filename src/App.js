@@ -19,6 +19,7 @@ function App() {
     { text: 'JavaScript', value: 30 },
     // Web technologies and frameworks
     { text: 'Flask', value: 80 },
+    { text: 'Django', value: 70 },
     { text: 'Invenio', value: 60 },
     { text: 'Celery', value: 60 },
     { text: 'SQLAlchemy', value: 50 },
@@ -36,12 +37,11 @@ function App() {
     { text: 'Keras', value: 30 },
     // DevOps
     { text: 'Docker', value: 80 },
-    { text: 'OpenShift', value: 70 },
+    { text: 'Datadog', value: 70 },
     { text: 'GitHub Actions', value: 70 },
-    { text: 'Helm', value: 40 },
-    { text: 'OpenStack', value: 30 },
-    { text: 'Puppet', value: 30 },
-    { text: 'Kibana', value: 30 },
+    { text: 'Kibana', value: 70 },
+    { text: 'OpenShift', value: 40 },
+    { text: 'Helm', value: 30 },
     { text: 'Grafana', value: 30 },
     // Hobbies
     { text: 'Dancing', value: 80 },
@@ -61,7 +61,7 @@ function App() {
           <Col md={8}>
             <Row className="section">
               <h1>I&apos;m Pablo Panero</h1>
-              <h3>Senior Software Engineer @ <a href="https://zenodo.org">Zenodo</a> (CERN)</h3>
+              <h3>Software Engineer @ <a href="https://preply.com">Preply</a></h3>
               <hr />
               <ListGroup horizontal className="social justify-content-md-center">
                 <ListGroup.Item key="cv">
