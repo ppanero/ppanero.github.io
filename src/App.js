@@ -69,7 +69,10 @@ function App() {
                     placement="bottom"
                     overlay={<Tooltip>Resume</Tooltip>}
                   >
-                    <a href="https://github.com/ppanero/ppanero.github.io/blob/development/ppanero_resume.pdf">
+                    <a
+                      href="https://github.com/ppanero/ppanero.github.io/blob/development/ppanero_resume.pdf"
+                      aria-label="Download resume"
+                    >
                       <FontAwesomeIcon icon={faFileLines} />
                     </a>
                   </OverlayTrigger>
@@ -79,7 +82,7 @@ function App() {
                     placement="bottom"
                     overlay={<Tooltip>Mail</Tooltip>}
                   >
-                    <a href="mailto:pablopanerovz@gmail.com">
+                    <a href="mailto:pablopanerovz@gmail.com" aria-label="Send email">
                       <FontAwesomeIcon icon={faEnvelope} />
                     </a>
                   </OverlayTrigger>
@@ -89,7 +92,7 @@ function App() {
                     placement="bottom"
                     overlay={<Tooltip>LinkedIn</Tooltip>}
                   >
-                    <a href="https://www.linkedin.com/in/ppanero/">
+                    <a href="https://www.linkedin.com/in/ppanero/" aria-label="LinkedIn profile url">
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </OverlayTrigger>
@@ -99,7 +102,7 @@ function App() {
                     placement="bottom"
                     overlay={<Tooltip>GitHub</Tooltip>}
                   >
-                    <a href="http://github.com/ppanero">
+                    <a href="http://github.com/ppanero" aria-label="GitHub profile url">
                       <FontAwesomeIcon icon={faGithubSquare} />
                     </a>
                   </OverlayTrigger>
@@ -109,7 +112,7 @@ function App() {
                     placement="bottom"
                     overlay={<Tooltip>StackOverflow</Tooltip>}
                   >
-                    <a href="https://stackoverflow.com/users/7031728/ppanero">
+                    <a href="https://stackoverflow.com/users/7031728/ppanero" aria-label="StackOverflow profile url">
                       <FontAwesomeIcon icon={faStackOverflow} />
                     </a>
                   </OverlayTrigger>
@@ -119,7 +122,7 @@ function App() {
                     placement="bottom"
                     overlay={<Tooltip>ORCID</Tooltip>}
                   >
-                    <a href="https://orcid.org/0000-0001-6759-6273">
+                    <a href="https://orcid.org/0000-0001-6759-6273" aria-label="ORCID profile url">
                       <FontAwesomeIcon icon={faOrcid} />
                     </a>
                   </OverlayTrigger>
